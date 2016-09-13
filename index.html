@@ -3,10 +3,219 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Мишка</title>
+	<style>
+		.map {
+			height: 457px;
+		}
+		.modal-window {
+			display: none;
+		}
+	</style>
 </head>
 <body>
+	<header class="page-header">
+		<div class="page-header__inner">
+			<div class="page-header__logo">
+				<img class="page-header__logo-image" src="http://placehold.it/86x35/ffffff/000000?text=Mishka" width="86" height="35" alt="Logo">
+			</div>
+			<nav class="main-menu main-menu--closed main-menu--nojs">
+				<button class="main-menu__toggle" type="button">Toggle</button>
+				<div class="main-menu__wrapper">
+					<ul class="main-menu__items">
+						<li class="main-menu__item">
+							<a href="catalog.html" class="main-menu__link">Каталог товаров</a>
+						</li>
+						<li class="main-menu__item">
+							<a href="form.html" class="main-menu__link">Вязание на заказ</a>
+						</li>
+						<li class="main-menu__item">
+							<form class="search-form search-form--menu" action="#" method="get">
+								<input class="search-form__field" type="search" name="s" id="s" placeholder="Поиск по сайту">
+								<input class="search-form__btn btn btn--search" type="submit" value="Искать">
+							</form>
+						</li>
+						<li class="main-menu__item">
+							<div class="cart-block cart-block--menu">
+								<span class="cart-block__info">Корзина: пока пуста</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<h1 class="page-header__slogan">Милые штуки ручной работы для дома</h1>
+			<div class="top-categories">
+				<a href="catalog.html" class="top-categories__item top-categories__item--first">
+					<b class="top-categories__item-title">Предметы интерьера</b>
+					<img src="http://placehold.it/60x60/62d1ba/ffffff?text=Предметы&nbsp;интерьера" width="60" height="60" alt="Предметы интерьера">
+				</a>
+				<a href="catalog.html" class="top-categories__item top-categories__item--second">
+					<b class="top-categories__item-title">Детские игрушки</b>
+					<img src="http://placehold.it/60x60/62d1ba/ffffff?text=Детские&nbsp;игрушки" width="60" height="60" alt="Детские игрушки">
+				</a>
+			</div>
+		</div>
+	</header>
 
-	<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+	<main>
+		<article class="featured">
+			<header class="featured__header">
+				<h2 class="featured__title">Вязаные корзинки</h2>
+				<h3 class="featured__label">ТОВАР НЕДЕЛИ</h3>
+			</header>
+			<div class="featured__content">
+				<div class="featured-excerpt">
+					<p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+				</div>
+				<table class="featured__details">
+					<tr>
+						<td class="featured__details-field">Цвет:</td>
+						<td class="featured__details-value">«Тиффани»/серый</td>
+					</tr>
+					<tr>
+						<td class="featured__details-field">Диаметр:</td>
+						<td class="featured__details-value">25&nbsp;см</td>
+					</tr>
+					<tr>
+						<td class="featured__details-field">Высота:</td>
+						<td class="featured__details-value">15&nbsp;см</td>
+					</tr>
+				</table>
+				<figure class="featured__thumbnail">
+					<img class="featured__image" src="http://placehold.it/300x315/62d1ba/ffffff?text=Thumbnail" width="300" height="315" alt="">
+				</figure>
+				<div class="featured__price">
+					<b class="featured__price-label">Цена:</b>&nbsp;<b class="featured__price-value">990 руб.</b>
+				</div>
+				<a href="#" class="featured__btn btn btn--primary">ЗАКАЗАТЬ</a>
+			</div>
+		</article>
 
+		<section class="about-us">
+			<div class="about-us__wrap">
+				<h2 class="about-us__title">Коротко о нас:</h2>
+				<ul class="about-us__items">
+					<li class="about-us__item">
+						<img class="about-us__item-img" src="http://placehold.it/50x50/62d1ba/ffffff?text=icon1" width="50" height="50" alt="">
+						<h3 class="about-us__item-title">Экологически чистые материалы</h3>
+					</li>
+					<li class="about-us__item">
+						<img class="about-us__item-img" src="http://placehold.it/50x50/62d1ba/ffffff?text=icon2" width="50" height="50" alt="">
+						<h3 class="about-us__item-title">Скандинавский стиль по российской цене</h3>
+					</li>
+					<li class="about-us__item">
+						<img class="about-us__item-img" src="http://placehold.it/50x50/62d1ba/ffffff?text=icon3" width="50" height="50" alt="">
+						<h3 class="about-us__item-title">Увеличивает лайки на фотографиях</h3>
+					</li>
+					<li class="about-us__item">
+						<img class="about-us__item-img" src="http://placehold.it/50x50/62d1ba/ffffff?text=icon4" width="50" height="50" alt="">
+						<h3 class="about-us__item-title">Связано вручную с любовью и умилением</h3>
+					</li>
+					<li class="about-us__item">
+						<img class="about-us__item-img" src="http://placehold.it/50x50/62d1ba/ffffff?text=icon5" width="50" height="50" alt="">
+						<h3 class="about-us__item-title">Поддержка отечественного производителя</h3>
+					</li>
+					<li class="about-us__item">
+						<img class="about-us__item-img" src="http://placehold.it/50x50/62d1ba/ffffff?text=icon6" width="50" height="50" alt="">
+						<h3 class="about-us__item-title">Поставляется в подарочной упаковке</h3>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="reviews">
+			<div class="reviews__wrap">
+				<h2 class="reviews__title">Отзывы</h2>
+				<div class="reviews__items slider">
+					<blockquote class="reviews__item slider__item">
+						<p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
+						<footer class="reviews__author">
+							<cite class="reviews__author-name">Анастасия Красильникова</cite>
+							<span class="reviews__author-email">@misssssiskras</span>
+						</footer>
+					</blockquote>
+
+					<button class="slider__prev" type="button">&larr;</button>
+					<button class="slider__next" type="button">&rarr;</button>
+				</div>
+				<a href="#" class="reviews__write btn btn--primary">НАПИСАТЬ</a>
+			</div>
+		</section>
+
+		<section class="contacts">
+			<div class="contacts__wrap">
+				<h2 class="contacts__title">Контакты</h2>
+				<dl class="contacts__items">
+					<dt class="contacts__field">e-mail:</dt>
+					<dd class="contacts__value"><a class="contacts__value-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
+					<dt class="contacts__field">адрес:</dt>
+					<dd class="contacts__value">
+						г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+					</dd>
+				</dl>
+				<div id="map" class="contacts__location map"></div>
+				<a href="#" class="contacts__write btn btn--primary">НАПИШИТЕ НАМ</a>
+			</div>
+		</section>
+	</main>
+
+	<footer class="page-footer">
+		<div class="page-footer__inner">
+			<p class="page-footer__social">
+				<span class="social-links">
+					<a class="social-link social-link--in" href="https://vk.com/" title="Мы в Instagram" target="_blank">Мы в Instagram</a>
+					<a class="social-link social-link--fb" href="https://facebook.com/" title="Мы в Facebook" target="_blank">Мы в Facebook</a>
+					<a class="social-link social-link--tw" href="https://twitter.com/" title="Мы в Twitter" target="_blank">Мы в Twitter</a>
+				</span>
+			</p>
+			<p class="page-footer__copyright">
+				Разработано
+				<a class="page-footer__copyright-link" href="https://htmlacademy.ru/" target="_blank">
+					<img src="http://placehold.it/27x34/63d1bb/ffffff?text=HTML" width="27" height="34" alt="HTML-academy logo">
+				</a>
+			</p>
+		</div>
+	</footer>
+
+	<section id="modal" class="modal-window">
+		<div class="modal-window__inner">
+			<header class="modal-window__header">
+				<h2 class="modal-window__title">Добавить в корзину</h2>
+			</header>
+			<div class="modal-window__content">
+				<form class="modal-window__form sizes-select-form" action="#" method="post">
+					<fieldset>
+						<legend>Выберите размер:</legend>
+						<input class="sizes-select-form__option sizes-select-form__option--active" type="radio" name="size" value="S" checked>
+						<input class="sizes-select-form__option" type="radio" name="size" value="M">
+						<input class="sizes-select-form__option" type="radio" name="size" value="L">
+					</fieldset>
+					<input class="sizes-select-form__add btn btn--secondary" type="submit" value="ДОБАВИТЬ">
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		function initMap() {
+			var center = {
+				lat: 59.935688, lng: 30.3185413
+			},
+			map, marker;
+
+			map = new google.maps.Map( document.getElementById( 'map' ), {
+				center: center,
+				scrollwheel: false,
+				draggable: false,
+				zoom: 16
+			} );
+
+			marker = new google.maps.Marker({
+				position: center,
+				map: map
+			});
+		}
+
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7bPvtKHcYRjpG5h34SalSbpMrAV64pFA&amp;callback=initMap" async defer></script>
 </body>
 </html>
