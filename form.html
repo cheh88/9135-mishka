@@ -3,11 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Мишка</title>
-	<style>
-		.modal-window {
-			display: none;
-		}
-	</style>
 </head>
 <body>
 	<header class="page-header">
@@ -30,7 +25,7 @@
 						<li class="main-menu__item">
 							<form class="search-form search-form--menu" action="#" method="get">
 								<input class="search-form__field" type="search" name="s" id="s" placeholder="Поиск по сайту">
-								<input class="search-form__btn btn btn--search" type="submit" value="Искать">
+								<button class="search-form__btn btn btn--search" type="submit">Искать</button>
 							</form>
 						</li>
 						<li class="main-menu__item">
@@ -54,7 +49,7 @@
 				<form class="order-form" action="#" method="post">
 
 					<fieldset>
-						<legend>ТИП</legend>
+						<legend>Тип</legend>
 						<div class="radio-element">
 							<input type="radio" name="order-type" id="order-type-1" class="radio-element__field" value="accessory" checked><label for="order-type-1">Аксессуар для интерьера</label><br>
 							<input type="radio" name="order-type" id="order-type-2" class="radio-element__field" value="toy"><label for="order-type-2">Детская игрушка</label>
@@ -62,7 +57,7 @@
 					</fieldset>
 
 					<fieldset>
-						<legend>ЦВЕТ</legend>
+						<legend>Цвет</legend>
 						<div class="checkbox-element">
 							<input type="checkbox" name="order-color" value="white" id="order-color-1" class="checkbox-element__field" checked><label for="order-color-1">Белый</label><br>
 							<input type="checkbox" name="order-color" value="grey" id="order-color-2" class="checkbox-element__field" checked><label for="order-color-2">Серый</label><br>
@@ -92,28 +87,28 @@
 					</fieldset>
 
 					<fieldset>
-						<legend>ТЕЛ</legend>
+						<legend>Tел</legend>
 						<div class="text-element">
 							<input type="tel" name="order-phone" id="order-phone" class="text-element__field text-element__field--phone" placeholder="+7 ХХХ ХХ ХХ" required>
 						</div>
 					</fieldset>
 
 					<fieldset>
-						<legend>E-MAIL</legend>
+						<legend>E-mail</legend>
 						<div class="text-element">
 							<input type="email" name="order-email" id="order-email" class="text-element__field text-element__field--email" placeholder="Ваш Email" required>
 						</div>
 					</fieldset>
 
 					<fieldset>
-						<legend>ДОП</legend>
+						<legend>Доп</legend>
 						<div class="textarea-element">
 							<textarea name="order-message" id="order-message" class="textarea-element__field" rows="5" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
 						</div>
 					</fieldset>
 
 					<div class="order__info form-info-message">Все поля обязательны для заполнения</div>
-					<input class="order__btn btn btn--primary" type="submit" value="ОТПРАВИТЬ ЗАКАЗ">
+					<button class="order__btn btn btn--primary" type="submit">Отправить заказ</button>
 				</form>
 			</div>
 		</section>
@@ -137,7 +132,7 @@
 		</div>
 	</footer>
 
-	<section id="modal" class="modal-window">
+	<section id="modal" class="modal-window" hidden>
 		<div class="modal-window__inner">
 			<header class="modal-window__header">
 				<h2 class="modal-window__title">Добавить в корзину</h2>
@@ -150,7 +145,7 @@
 						<input class="sizes-select-form__option" type="radio" name="size" value="M">
 						<input class="sizes-select-form__option" type="radio" name="size" value="L">
 					</fieldset>
-					<input class="sizes-select-form__add btn btn--secondary" type="submit" value="ДОБАВИТЬ">
+					<button class="sizes-select-form__add btn btn--secondary" type="submit">Добавить</button>
 				</form>
 			</div>
 		</div>

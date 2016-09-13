@@ -3,14 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Мишка</title>
-	<style>
-		.map {
-			height: 457px;
-		}
-		.modal-window {
-			display: none;
-		}
-	</style>
 </head>
 <body>
 	<header class="page-header">
@@ -31,7 +23,7 @@
 						<li class="main-menu__item">
 							<form class="search-form search-form--menu" action="#" method="get">
 								<input class="search-form__field" type="search" name="s" id="s" placeholder="Поиск по сайту">
-								<input class="search-form__btn btn btn--search" type="submit" value="Искать">
+								<button class="search-form__btn btn btn--search" type="submit">Искать</button>
 							</form>
 						</li>
 						<li class="main-menu__item">
@@ -42,7 +34,7 @@
 					</ul>
 				</div>
 			</nav>
-			<h1 class="page-header__slogan">Милые штуки ручной работы для дома</h1>
+			<b class="page-header__slogan">Милые штуки ручной работы для дома</b>
 			<div class="top-categories">
 				<a href="catalog.html" class="top-categories__item top-categories__item--first">
 					<b class="top-categories__item-title">Предметы интерьера</b>
@@ -60,7 +52,7 @@
 		<article class="featured">
 			<header class="featured__header">
 				<h2 class="featured__title">Вязаные корзинки</h2>
-				<h3 class="featured__label">ТОВАР НЕДЕЛИ</h3>
+				<h3 class="featured__label">Товар недели</h3>
 			</header>
 			<div class="featured__content">
 				<div class="featured-excerpt">
@@ -86,7 +78,7 @@
 				<div class="featured__price">
 					<b class="featured__price-label">Цена:</b>&nbsp;<b class="featured__price-value">990 руб.</b>
 				</div>
-				<a href="#" class="featured__btn btn btn--primary">ЗАКАЗАТЬ</a>
+				<a href="#" class="featured__btn btn btn--primary">Заказать</a>
 			</div>
 		</article>
 
@@ -137,7 +129,7 @@
 					<button class="slider__prev" type="button">&larr;</button>
 					<button class="slider__next" type="button">&rarr;</button>
 				</div>
-				<a href="#" class="reviews__write btn btn--primary">НАПИСАТЬ</a>
+				<a href="#" class="reviews__write btn btn--primary">Написать</a>
 			</div>
 		</section>
 
@@ -153,7 +145,7 @@
 					</dd>
 				</dl>
 				<div id="map" class="contacts__location map"></div>
-				<a href="#" class="contacts__write btn btn--primary">НАПИШИТЕ НАМ</a>
+				<a href="#" class="contacts__write btn btn--primary">Напишите нам</a>
 			</div>
 		</section>
 	</main>
@@ -176,7 +168,7 @@
 		</div>
 	</footer>
 
-	<section id="modal" class="modal-window">
+	<section id="modal" class="modal-window" hidden>
 		<div class="modal-window__inner">
 			<header class="modal-window__header">
 				<h2 class="modal-window__title">Добавить в корзину</h2>
@@ -189,33 +181,10 @@
 						<input class="sizes-select-form__option" type="radio" name="size" value="M">
 						<input class="sizes-select-form__option" type="radio" name="size" value="L">
 					</fieldset>
-					<input class="sizes-select-form__add btn btn--secondary" type="submit" value="ДОБАВИТЬ">
+					<button class="sizes-select-form__add btn btn--secondary" type="submit">Добавить</button>
 				</form>
 			</div>
 		</div>
 	</section>
-
-	<script>
-		function initMap() {
-			var center = {
-				lat: 59.935688, lng: 30.3185413
-			},
-			map, marker;
-
-			map = new google.maps.Map( document.getElementById( 'map' ), {
-				center: center,
-				scrollwheel: false,
-				draggable: false,
-				zoom: 16
-			} );
-
-			marker = new google.maps.Marker({
-				position: center,
-				map: map
-			});
-		}
-
-	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7bPvtKHcYRjpG5h34SalSbpMrAV64pFA&amp;callback=initMap" async defer></script>
 </body>
 </html>
