@@ -1,0 +1,22 @@
+.product {
+	border: 1px solid $gray-lightest;
+	margin-top: 30px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.product__inner {
+	padding: 10px 30px;
+}
+
+.product__thumbnail {
+	margin: 0;
+}
+
+.product__footer {
+	border-top: 1px solid $gray-lightest;
+	padding-top: 1em;
+	margin-top: 1em;
+}
