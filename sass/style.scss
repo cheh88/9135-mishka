@@ -7,17 +7,6 @@
 @import 'global/scaffolding';
 @import 'global/typography';
 
-// Forms elements
-@import 'forms/fields/checkbox';
-@import 'forms/fields/radio';
-@import 'forms/fields/text';
-@import 'forms/fields/textarea';
-
-// Forms
-@import 'forms/order-form';
-@import 'forms/search-form';
-@import 'forms/sizes-select-form';
-
 // Blocks
 @import 'blocks/page-header';
 @import 'blocks/page-title';
@@ -40,3 +29,15 @@
 @import 'blocks/socials';
 @import 'blocks/top-categories';
 @import 'blocks/video-block';
+
+// Forms elements
+@import 'forms/fields/checkbox';
+@import 'forms/fields/radio';
+@import 'forms/fields/text';
+@import 'forms/fields/textarea';
+@import 'forms/fields/message';
+
+// Forms
+@import 'forms/order-form';
+@import 'forms/search-form';
+@import 'forms/sizes-select-form';

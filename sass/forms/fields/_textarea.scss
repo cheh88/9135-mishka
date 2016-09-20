@@ -1,0 +1,37 @@
+.textarea-element__field {
+	padding: 15px;
+	margin: 0;
+	width: 100%;
+	border: 2px solid $input-border;
+	font-family: $font-family-base;
+	font-size: $input-font-size;
+	line-height: $input-line-height;
+	color: $input-active-color;
+	resize: vertical;
+	box-sizing: border-box;
+
+	&::placeholder {
+		color: $input-placeholder-color;
+		opacity: 1;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: $input-active-border;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled,
+	&[readonly] {
+		border-color: $input-placeholder-color;
+		opacity: 1;
+	}
+
+	&:invalid {
+		border-color: $input-error-border;
+	}
+}

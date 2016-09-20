@@ -35,6 +35,19 @@ $btn-primary-color:  $gray-dark;
 $btn-primary-bg:     #fff;
 $btn-primary-border: $gray-dark;
 
+
+// Forms
+$input-font-size:         17px;
+$input-line-height:       20px;
+
+$input-placeholder-color: $gray-lighten;
+$input-active-color:      $gray-dark;
+
+$input-border:            $gray-dark;
+$input-active-border:     $primary-color;
+$input-error-border:      $danger-color;
+
+
 // Grid
 $grid-breakpoints: (
 	xs: 0,

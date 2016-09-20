@@ -23,6 +23,10 @@
 			@include button-variant( $btn-primary-bg, $btn-primary-color, $btn-primary-color );
 		}
 
+		&:focus {
+			outline: none;
+		}
+
 		&:focus,
 		&:active {
 			@include button-variant( rgba( $btn-primary-bg, 0.3 ), $btn-primary-color, $btn-primary-color );
