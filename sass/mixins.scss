@@ -1,0 +1,21 @@
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+@mixin list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+
+// Button variants
+@mixin button-variant( $color, $background, $border ) {
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+}
+
+// Clearfix
+@mixin clearfix() {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}

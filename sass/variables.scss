@@ -1,0 +1,57 @@
+// Colors
+$gray-dark:     #444;
+$gray:          #666;
+$gray-light:    #b2b2b2;
+$gray-lighten:  #c7c7c7;
+$gray-lightest: #ececec;
+
+$primary-color: #62d1ba;
+$danger-color:  #f0b1b1;
+
+
+// Body
+$body-text-color: $gray-dark;
+$body-bg-color:   #f1f1f1;
+$main-bg-color:   #fff;
+
+
+// Links
+$link-color:            #000;
+$link-hover-color:      $gray;
+$link-active-color:     $gray-light;
+$link-decoration:       none;
+$link-hover-decoration: $link-decoration;
+
+
+// Typography
+$font-family-base: 'Open Sans', Arial, sans-serif;
+$font-size-base:   15px;
+$line-height-base: 1.6;
+$heading-color:    $link-color;
+
+
+// Buttons
+$btn-primary-color:  $gray-dark;
+$btn-primary-bg:     #fff;
+$btn-primary-border: $gray-dark;
+
+
+// Forms
+$input-font-size:         17px;
+$input-line-height:       20px;
+
+$input-placeholder-color: $gray-lighten;
+$input-active-color:      $gray-dark;
+
+$input-border:            $gray-dark;
+$input-active-border:     $primary-color;
+$input-error-border:      $danger-color;
+
+
+// Grid
+$grid-breakpoints: (
+	xs: 0,
+	sm: 320px,
+	md: 768px,
+	lg: 1150px
+);

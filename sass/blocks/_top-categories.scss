@@ -1,0 +1,37 @@
+.top-categories__item {
+	display: block;
+	background-color: $primary-color;
+	color: #fff;
+
+	svg {
+		vertical-align: middle;
+		opacity: 0.5;
+	}
+
+	path {
+		fill: #149080;
+	}
+
+	&:hover {
+		color: #fff;
+		background-color: saturate($primary-color, 9%);
+
+		svg {
+			opacity: 0.7;
+		}
+	}
+
+	&:focus,
+	&:active {
+		color: #fff;
+		background-color: saturate($primary-color, 9%);
+
+		.top-categories__item-title {
+			opacity: 0.3;
+		}
+
+		svg {
+			opacity: 0.3;
+		}
+	}
+}
