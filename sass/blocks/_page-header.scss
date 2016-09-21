@@ -1,7 +1,8 @@
 .page-header {
+	padding: 30px 0;
 	background-color: $main-bg-color;
 }
 
 .page-header__inner {
-	padding: 30px;
+	@include container;
 }
