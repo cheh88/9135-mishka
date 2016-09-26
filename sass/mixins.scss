@@ -7,29 +7,54 @@
 // Button variants
 @mixin button-variant( $color, $background, $border ) {
 	color: $color;
-	background-color: $background;
 	border-color: $border;
+	background-color: $background;
 }
 
 // Clearfix
 @mixin clearfix() {
 	&::after {
-		content: '';
 		display: table;
 		clear: both;
+		content: '';
+	}
+}
+
+// Media queries
+@mixin mobile-only() {
+	@media (max-width: #{$tablet-width} - 1px) {
+		@content;
+	}
+}
+
+@mixin tablet-only() {
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width} - 1px) {
+		@content;
+	}
+}
+
+@mixin tablet() {
+	@media (min-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+@mixin desktop() {
+	@media (min-width: #{$desktop-width}) {
+		@content;
 	}
 }
 
 // Container
 @mixin container() {
-	width: 260px;
+	width: $mobile-width - ($mobile-gutter * 2);
 	margin: 0 auto;
 
-	@media ( min-width: 768px ) {
-		width: 668px;
+	@include tablet {
+		width: $tablet-width - ($tablet-gutter * 2);
 	}
 
-	@media ( min-width: 1150px ) {
-		width: 1050px;
+	@include desktop {
+		width: $desktop-width - ($desktop-gutter * 2);
 	}
 }

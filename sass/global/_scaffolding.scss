@@ -1,25 +1,26 @@
 body {
-	min-width: $container-mobile;
 	font-family: $font-family-base;
 	font-size: $font-size-base;
 	line-height: $line-height-base;
+
+	min-width: $mobile-width;
+
 	color: $body-text-color;
 	background-color: $body-bg-color;
 }
 
 a {
-	color: $link-color;
 	font-weight: bold;
+
 	text-decoration: $link-decoration;
 
+	color: $link-color;
 	&:hover {
-		color: $link-hover-color;
 		text-decoration: $link-hover-decoration;
-	}
 
-	&:focus,
+		color: $link-hover-color;
+	}
 	&:active {
-		outline: none;
 		color: $link-active-color;
 	}
 }

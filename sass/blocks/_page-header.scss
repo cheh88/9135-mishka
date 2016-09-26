@@ -1,8 +1,43 @@
 .page-header {
-	padding: 30px 0;
 	background-color: $main-bg-color;
 }
 
-.page-header__inner {
+.page-header__top {
+	min-height: 78px;
+
+	border-top: 1px solid $gray-lightest;
+	border-bottom: 1px solid $gray-lightest;
+}
+
+.page-header__top-wrapper {
 	@include container;
+}
+
+.page-header__logo {
+	padding-top: 21px;
+
+	text-align: center;
+}
+
+@include tablet {
+	.page-header__top-wrapper {
+		@include clearfix;
+	}
+	.page-header__logo {
+		position: relative;
+		z-index: 2;
+
+		float: left;
+	}
+}
+
+@include desktop {
+	.page-header__logo {
+		position: absolute;
+		left: 50%;
+
+		float: none;
+
+		transform: translateX(-50%);
+	}
 }

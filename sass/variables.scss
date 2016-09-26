@@ -35,6 +35,9 @@ $btn-primary-color:  $gray-dark;
 $btn-primary-bg:     #fff;
 $btn-primary-border: $gray-dark;
 
+// Menu
+$toggle-color: #221f1f;
+
 
 // Forms
 $input-font-size:         17px;
@@ -49,10 +52,10 @@ $input-error-border:      $danger-color;
 
 
 // Grid
-$container-mobile:  320px;
-$container-tablet:  768px;
-$container-desktop: 1150px;
+$mobile-width:  320px;
+$tablet-width:  768px;
+$desktop-width: 1150px;
 
-$gutter-mobile:     30px;
-$gutter-tablet:     50px;
-$gutter-desktop:    50px;
+$mobile-gutter:     30px;
+$tablet-gutter:     50px;
+$desktop-gutter:    50px;

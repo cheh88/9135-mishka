@@ -1,0 +1,30 @@
+.search-form--top .search-form__link {
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 1.41;
+
+	display: block;
+
+	padding: 27px 15px 27px 75px;
+
+	border-top: 1px solid $gray-lightest;
+}
+
+@include tablet {
+	.search-form--top {
+		float: right;
+	}
+
+	.search-form--top .search-form__link {
+		padding-right: 0;
+		padding-left: 0;
+		width: 82px;
+		text-align: center;
+		border-left: 1px solid $gray-lightest;
+		border-top: none;
+	}
+
+	.search-form--top .search-form__link-text {
+		display: none;
+	}
+}
