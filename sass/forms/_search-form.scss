@@ -1,30 +1,53 @@
+.search-form__link svg {
+	vertical-align: middle;
+}
+
+.search-form__link path {
+	fill: #d3d2d2;
+}
+
+.search-form__link:hover path {
+	fill: $primary-color;
+}
+
+.search-form__link:active path {
+	fill: rgba($primary-color, .3);
+}
+
 .search-form--top .search-form__link {
+	display: block;
+	padding: 27px 15px 27px 30px;
 	font-size: 17px;
 	font-weight: bold;
-	line-height: 1.41;
-
-	display: block;
-
-	padding: 27px 15px 27px 75px;
-
+	line-height: 24px;
 	border-top: 1px solid $gray-lightest;
+}
+
+.search-form--top .search-form__link-text {
+	vertical-align: middle;
+	margin-left: 22px;
 }
 
 @include tablet {
 	.search-form--top {
 		float: right;
 	}
-
 	.search-form--top .search-form__link {
+		width: 82px;
 		padding-right: 0;
 		padding-left: 0;
-		width: 82px;
 		text-align: center;
-		border-left: 1px solid $gray-lightest;
 		border-top: none;
+		border-left: 1px solid $gray-lightest;
 	}
-
 	.search-form--top .search-form__link-text {
 		display: none;
+	}
+}
+
+@include desktop {
+	.search-form--top .search-form__link {
+		padding-top: 32px;
+		padding-bottom: 32px;
 	}
 }

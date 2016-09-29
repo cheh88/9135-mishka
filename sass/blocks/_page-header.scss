@@ -4,7 +4,6 @@
 
 .page-header__top {
 	min-height: 78px;
-
 	border-top: 1px solid $gray-lightest;
 	border-bottom: 1px solid $gray-lightest;
 }
@@ -15,7 +14,6 @@
 
 .page-header__logo {
 	padding-top: 21px;
-
 	text-align: center;
 }
 
@@ -26,7 +24,6 @@
 	.page-header__logo {
 		position: relative;
 		z-index: 2;
-
 		float: left;
 	}
 }
@@ -35,9 +32,7 @@
 	.page-header__logo {
 		position: absolute;
 		left: 50%;
-
 		float: none;
-
 		transform: translateX(-50%);
 	}
 }

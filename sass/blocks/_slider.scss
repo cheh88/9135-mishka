@@ -1,0 +1,62 @@
+.slider__item {
+	display: none;
+	&:first-child {
+		display: block;
+	}
+}
+
+.slider__nav {
+	font-size: 0;
+}
+
+.slider__prev,
+.slider__next {
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+.slider__prev:hover polygon,
+.slider__next:hover polygon {
+	fill: $gray;
+}
+
+.slider__prev:active polygon,
+.slider__next:active polygon {
+	fill: $gray-light;
+}
+
+@include mobile-only {
+	.slider__prev,
+	.slider__next {
+		display: inline-block;
+		box-sizing: border-box;
+		width: 50%;
+		padding: 12px 0;
+		text-align: center;
+		border: 1px solid $gray-lightest;
+	}
+	.slider__prev {
+		border-right: none;
+	}
+}
+
+@include tablet {
+	.slider__nav {
+		position: absolute;
+		z-index: 2;
+		right: 17px;
+		bottom: 60px;
+	}
+	.slider__next {
+		margin-left: 37px;
+	}
+}
+
+@include desktop {
+	.slider__nav {
+		bottom: 110px;
+	}
+}

@@ -1,23 +1,47 @@
-.cart-block--top .cart-block__info {
+.cart-block__link svg {
+	vertical-align: middle;
+}
+
+.cart-block__link path {
+	fill: #d3d2d2;
+}
+
+.cart-block__link:hover path {
+	fill: $primary-color;
+}
+
+.cart-block__link:active path {
+	fill: rgba($primary-color, .3);
+}
+
+.cart-block--top .cart-block__link {
+	display: block;
+	padding: 27px 15px 27px 30px;
 	font-size: 17px;
 	font-weight: bold;
 	line-height: 1.41;
-
-	display: block;
-
-	padding: 27px 15px 27px 75px;
-
 	border-top: 1px solid $gray-lightest;
+}
+
+.cart-block--top .cart-block__info {
+	vertical-align: middle;
+	margin-left: 22px;
 }
 
 @include tablet {
 	.cart-block--top {
 		float: right;
 	}
-
-	.cart-block--top .cart-block__info {
-		border-left: 1px solid $gray-lightest;
-		border-top: none;
+	.cart-block--top .cart-block__link {
 		padding-left: 31px;
+		border-top: none;
+		border-left: 1px solid $gray-lightest;
+	}
+}
+
+@include desktop {
+	.cart-block--top .cart-block__link {
+		padding-top: 31px;
+		padding-bottom: 32px;
 	}
 }

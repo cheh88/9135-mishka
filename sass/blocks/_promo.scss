@@ -1,13 +1,43 @@
 .promo {
 	background: #f9f9f9 url('../img/hero-mobile@1x.jpg') 50% 0 no-repeat;
-	background-size: cover;
+}
+
+.promo__wrapper {
+	position: relative;
+	min-height: 282px;
+
+	@include container;
 }
 
 .promo__text {
+	position: absolute;
+	top: 25%;
+	left: 0;
 	display: block;
-	min-height: 282px;
-	text-align: center;
+	width: 100%;
+	margin: 0;
 	font-size: 27px;
-	line-height: 300px;
+	line-height: 30px;
+	text-align: center;
 	color: $heading-color;
+}
+
+@include tablet {
+	.promo__wrapper {
+		min-height: 626px;
+	}
+	.promo__text {
+		font-size: 43px;
+		line-height: 50px;
+	}
+	.promo__text br:first-child {
+		display: none;
+	}
+}
+
+@include desktop {
+	.promo__text {
+		font-size: 53px;
+		line-height: 57px;
+	}
 }
