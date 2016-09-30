@@ -109,7 +109,7 @@
 
 	.contacts__location {
 		float: right;
-		width: 525px;
+		width: $desktop-col * 3;
 		margin: 0;
 	}
 }

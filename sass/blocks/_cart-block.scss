@@ -19,13 +19,13 @@
 	padding: 27px 15px 27px 30px;
 	font-size: 17px;
 	font-weight: bold;
-	line-height: 1.41;
+	line-height: 24px;
 	border-top: 1px solid $gray-lightest;
 }
 
 .cart-block--top .cart-block__info {
-	vertical-align: middle;
 	margin-left: 22px;
+	vertical-align: middle;
 }
 
 @include tablet {

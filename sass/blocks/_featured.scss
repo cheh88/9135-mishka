@@ -1,5 +1,6 @@
 .featured {
 	padding-bottom: 30px;
+
 	@include container;
 }
 
@@ -13,12 +14,9 @@
 
 .featured__label {
 	display: block;
-
 	font-size: 17px;
 	line-height: 1;
-
 	text-transform: uppercase;
-
 	color: $primary-color;
 }
 
@@ -30,27 +28,24 @@
 	margin: 0 0 25px;
 }
 
-.featured__thumbnail img {
+.featured__image {
 	vertical-align: top;
 }
 
 .featured__details {
 	width: 100%;
 	border-collapse: collapse;
-
 	background-color: transparent;
 }
 
 .featured__details-field,
 .featured__details-value {
 	padding: 8px 0;
-
 	border-bottom: 1px solid $gray-lightest;
 }
 
 .featured__price {
 	margin-bottom: 25px;
-
 	text-align: center;
 }
 
@@ -89,29 +84,24 @@
 	}
 	.featured__thumbnail {
 		float: right;
-
 		width: 50%;
 		min-height: 405px;
 		margin: 0 0 20px 44px;
-
 		text-align: center;
-
 		background-color: rgba($primary-color, .2);
 	}
 	.featured__content {
 		float: left;
-
 		width: calc(50% - 44px);
 		margin-bottom: 55px;
 	}
 	.featured-excerpt {
+		padding-bottom: 10px;
 		font-size: 17px;
 		line-height: 30px;
-		padding-bottom: 10px;
 	}
 	.featured__footer {
 		float: left;
-
 		width: calc(50% - 44px);
 	}
 	.featured__price {
@@ -136,10 +126,10 @@
 	}
 	.featured__title {
 		float: right;
+		margin: 0;
 	}
 	.featured__label {
 		float: left;
-
 		width: $desktop-col;
 		margin: 15px 0 0;
 	}
