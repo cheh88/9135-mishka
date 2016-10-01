@@ -17,6 +17,9 @@
 		color: #fff;
 		background-color: $primary-color-dark;
 	}
+	&:hover {
+		transform: translateY(-5px);
+	}
 }
 
 .top-categories__item--second {

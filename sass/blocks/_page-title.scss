@@ -1,5 +1,5 @@
 .page-title {
-	padding: 30px 0;
+	padding: 70px 0 75px;
 	background-color: $body-bg-color;
 }
 
@@ -10,5 +10,24 @@
 .page-title__heading {
 	margin: 0;
 	font-size: 27px;
-	line-height: 1.23;
+	line-height: 30px;
+	text-align: center;
+}
+
+@include tablet {
+	.page-title {
+		padding-top: 95px;
+	}
+
+	.page-title__heading {
+		font-size: 43px;
+		line-height: 50px;
+	}
+}
+
+@include desktop {
+	.page-title__heading {
+		font-size: 53px;
+		line-height: 57px;
+	}
 }

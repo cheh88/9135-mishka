@@ -1,5 +1,12 @@
 .form-info-message {
 	padding: 15px 0;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 18px;
+}
+
+@include tablet {
+	.form-info-message {
+		font-size: 17px;
+		line-height: 30px
+	}
 }

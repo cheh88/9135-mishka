@@ -22,7 +22,7 @@
 		display: block;
 	}
 	&--primary {
-		padding: 14px 40px;
+		padding: 14px;
 
 		color: $btn-primary-color;
 		border: 2px solid $btn-primary-border;
@@ -38,4 +38,16 @@
 			@include button-variant( rgba( $btn-primary-bg, .3 ), $btn-primary-color, $btn-primary-color );
 		}
 	}
+}
+
+.btn--cart path {
+	fill: $btn-cart-color;
+}
+
+.btn--cart:hover path {
+	fill: $primary-color;
+}
+
+.btn--cart:active path {
+	fill: rgba($primary-color, .3);
 }
