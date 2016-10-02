@@ -33,21 +33,30 @@
 	.about-us {
 		padding: 45px 0 70px;
 	}
-	.about-us__items {
-		font-size: 0;
+	.about-us__body {
+		@include clearfix;
 	}
-	.about-us__item {
-		display: inline-block;
+	.about-us__items {
+		float: left;
 		width: 50%;
-		vertical-align: top;
-		margin-top: 45px;
-		&:nth-child(odd) {
+		width: calc(50% - 95px);
+		margin-right: 95px;
+		&:nth-child(even) {
 			width: calc(50% - 40px);
 			margin-right: 40px;
 		}
 	}
+	.about-us__item {
+		margin-top: 60px;
+		&:first-child {
+			margin-top: 25px;
+		}
+	}
+	.about-us__item-title {
+		line-height: 1.2;
+	}
 	.about-us__icon {
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 	}
 }
 
@@ -56,10 +65,10 @@
 		padding-bottom: 75px;
 	}
 	.about-us__title {
-		padding-left: $desktop-col;
 		margin-bottom: 15px;
+		padding-left: $desktop-col;
 	}
-	.about-us__items {
+	.about-us__body {
 		padding-right: $desktop-col;
 		padding-left: $desktop-col;
 	}

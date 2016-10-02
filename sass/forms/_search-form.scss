@@ -1,53 +1,30 @@
-.search-form__link svg {
+.search-form__btn svg {
 	vertical-align: middle;
 }
 
-.search-form__link path {
-	fill: #d3d2d2;
+.search-form__btn path {
+	fill: $btn-search-color;
 }
 
-.search-form__link:hover path {
-	fill: $primary-color;
+.search-form__btn:hover path {
+	fill: $primary-color-light;
 }
 
-.search-form__link:active path {
-	fill: rgba($primary-color, .3);
+.search-form__btn:active path {
+	fill: rgba($primary-color-light, .3);
 }
 
-.search-form--top .search-form__link {
-	display: block;
-	padding: 27px 15px 27px 30px;
-	font-size: 17px;
-	font-weight: bold;
-	line-height: 24px;
-	border-top: 1px solid $gray-lightest;
+.search-form__btn-text {
+	display: none;
 }
 
-.search-form--top .search-form__link-text {
+.search-form--top .search-form__btn-text {
 	vertical-align: middle;
 	margin-left: 22px;
 }
 
-@include tablet {
-	.search-form--top {
-		float: right;
-	}
-	.search-form--top .search-form__link {
-		width: 82px;
-		padding-right: 0;
-		padding-left: 0;
-		text-align: center;
-		border-top: none;
-		border-left: 1px solid $gray-lightest;
-	}
-	.search-form--top .search-form__link-text {
-		display: none;
-	}
-}
-
-@include desktop {
-	.search-form--top .search-form__link {
-		padding-top: 32px;
-		padding-bottom: 32px;
+@include mobile-only {
+	.search-form--top .search-form__btn-text {
+		display: inline;
 	}
 }
