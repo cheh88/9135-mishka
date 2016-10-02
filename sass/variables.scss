@@ -1,12 +1,17 @@
 // Colors
-$gray-dark:     #444;
-$gray:          #666;
-$gray-light:    #b2b2b2;
-$gray-lighten:  #c7c7c7;
-$gray-lightest: #ececec;
+$gray-dark:             #444;
+$gray:                  #666;
+$gray-light:            #b2b2b2;
+$gray-lighten:          #c7c7c7;
+$gray-lightest:         #ececec;
 
-$primary-color: #62d1ba;
-$danger-color:  #f0b1b1;
+$primary-color-darkest: #46c1ae;
+$primary-color-darken:  #56c3b2;
+$primary-color-dark:    #59d5bc;
+$primary-color:         #62d1ba;
+$primary-color-light:   #63d1bb;
+
+$danger-color:          #f0b1b1;
 
 
 // Body
@@ -35,6 +40,13 @@ $btn-primary-color:  $gray-dark;
 $btn-primary-bg:     #fff;
 $btn-primary-border: $gray-dark;
 
+$btn-cart-color:     #d3d2d2;
+$btn-search-color:   #d3d2d2;
+
+
+// Menu
+$toggle-color: #221f1f;
+
 
 // Forms
 $input-font-size:         17px;
@@ -49,9 +61,14 @@ $input-error-border:      $danger-color;
 
 
 // Grid
-$grid-breakpoints: (
-	xs: 0,
-	sm: 320px,
-	md: 768px,
-	lg: 1150px
-);
+$mobile-width:   320px;
+$tablet-width:   768px;
+$desktop-width:  1150px;
+
+$mobile-gutter:  30px;
+$tablet-gutter:  50px;
+$desktop-gutter: 50px;
+
+$mobile-col:     130px;
+$tablet-col:     167px;
+$desktop-col:    175px;

@@ -1,9 +1,75 @@
+.about-us {
+	padding: 25px 0 55px;
+}
+
+.about-us__wrap {
+	@include container;
+}
+
 .about-us__items {
+	margin: 0;
+
 	@include list-unstyled;
 }
-.about-us__icon {
 
-	path {
-		fill: $primary-color;
+.about-us__item {
+	margin-top: 30px;
+}
+
+.about-us__icon {
+	margin: 0 0 18px;
+}
+
+.about-us__icon path {
+	fill: $primary-color;
+}
+
+.about-us__item-title {
+	margin: 0;
+	line-height: 20px;
+}
+
+@include tablet {
+	.about-us {
+		padding: 45px 0 70px;
+	}
+	.about-us__body {
+		@include clearfix;
+	}
+	.about-us__items {
+		float: left;
+		width: 50%;
+		width: calc(50% - 95px);
+		margin-right: 95px;
+		&:nth-child(even) {
+			width: calc(50% - 40px);
+			margin-right: 40px;
+		}
+	}
+	.about-us__item {
+		margin-top: 60px;
+		&:first-child {
+			margin-top: 25px;
+		}
+	}
+	.about-us__item-title {
+		line-height: 1.2;
+	}
+	.about-us__icon {
+		margin-bottom: 15px;
+	}
+}
+
+@include desktop {
+	.about-us {
+		padding-bottom: 75px;
+	}
+	.about-us__title {
+		margin-bottom: 15px;
+		padding-left: $desktop-col;
+	}
+	.about-us__body {
+		padding-right: $desktop-col;
+		padding-left: $desktop-col;
 	}
 }

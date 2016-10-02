@@ -3,124 +3,192 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Мишка</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="page-header">
-		<div class="page-header__inner">
-			<div class="page-header__logo">
-				<a class="page-header__logo-link" href="index.html">
-					<img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Logo">
-				</a>
-			</div>
-			<nav class="main-menu main-menu--closed main-menu--nojs">
-				<button class="main-menu__toggle btn" type="button">Открыть Меню</button>
-				<div class="main-menu__wrapper">
-					<ul class="main-menu__items">
-						<li class="main-menu__item">
-							<a href="catalog.html" class="main-menu__link">Каталог товаров</a>
-						</li>
-						<li class="main-menu__item main-menu__item--active">
-							<a class="main-menu__link">Вязание на заказ</a>
-						</li>
-						<li class="main-menu__item">
-							<form class="search-form search-form--menu" action="#" method="get">
-								<input class="search-form__field" type="search" name="s" id="s" placeholder="Поиск по сайту">
-								<button class="search-form__btn btn btn--search" type="submit">
+
+		<div class="page-header__top">
+			<div class="page-header__top-wrapper">
+				<div class="page-header__logo">
+					<a href="index.html" class="page-header__logo-link">
+						<img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+					</a>
+				</div>
+
+				<nav class="main-nav main-nav--closed main-nav--nojs">
+					<button class="main-nav__toggle btn" type="button">Открыть Меню</button>
+
+					<div class="main-nav__wrapper">
+						<ul class="main-nav__items main-nav__items--primary">
+							<li class="main-nav__item">
+								<a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+							</li>
+							<li class="main-nav__item main-menu__item--active">
+								<a href="form.html" class="main-nav__link">Вязание на заказ</a>
+							</li>
+						</ul>
+
+						<ul class="main-nav__items main-nav__items--secondary">
+							<li class="main-nav__item">
+								<a href="#" class="main-nav__link">Новые поступления</a>
+							</li>
+							<li class="main-nav__item">
+								<a href="#" class="main-nav__link">Распродажа</a>
+							</li>
+							<li class="main-nav__item main-nav__item--delivery">
+								<a href="#" class="main-nav__link">Бесплатная доставка по России</a>
+							</li>
+						</ul>
+
+						<ul class="main-nav__items main-nav__items--services">
+							<li class="main-nav__item main-nav__item--search search-form search-form--top">
+								<a href="#" class="main-nav__link search-form__btn">
 									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
 										<path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
 									</svg>
-								</button>
-							</form>
-						</li>
-						<li class="main-menu__item">
-							<div class="cart-block cart-block--menu">
-								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
-									<path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
-								</svg>
-								<span class="cart-block__info">Корзина: пока пуста</span>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</nav>
+									<span class="search-form__btn-text">Поиск по сайту</span>
+								</a>
+							</li>
+							<li class="main-nav__item main-nav__item--cart cart-block cart-block--top">
+								<a href="#" class="main-nav__link cart-block__link">
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+										<path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+									</svg>
+									<span class="cart-block__info">Корзина: пока пуста</span>
+								</a>
+							</li>
+						</ul>
+
+					</div>
+				</nav>
+			</div>
 		</div>
+
 	</header>
 
 	<main class="page-main">
+
 		<section class="page-main__title page-title">
-			<h1 class="page-title__heading">Вязание на заказ</h1>
+			<header class="page-title__header">
+				<h1 class="page-title__heading">Вязание на заказ</h1>
+			</header>
 		</section>
+
 		<div class="page-main__inner">
 			<form class="order-form" action="#" method="post">
-				<p class="order-form__desc">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-				<fieldset>
-					<legend>Тип</legend>
-					<div class="radio-element">
-						<input type="radio" name="order-type" id="order-type-1" class="radio-element__field" value="accessory" checked><label for="order-type-1">Аксессуар для интерьера</label><br>
-						<input type="radio" name="order-type" id="order-type-2" class="radio-element__field" value="toy" ><label for="order-type-2">Детская игрушка</label>
-					</div>
-				</fieldset>
+				<div class="order-form__desc">
+					<div class="order-form__desc-wrapper">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</div>
+				</div>
+				<div class="order-form__fieldset-wrap">
+					<fieldset>
+						<legend>Тип</legend>
+						<div class="order-form__fields">
+							<div class="order-form__field-item radio-element">
+								<input type="radio" name="order-type" id="order-type-1" class="radio-element__field" value="accessory" checked><label for="order-type-1"><span class="radio-element__label-text">Аксессуар для интерьера</span></label>
+							</div>
+							<div class="order-form__field-item radio-element">
+								<input type="radio" name="order-type" id="order-type-2" class="radio-element__field" value="toy"><label for="order-type-2"><span class="radio-element__label-text">Детская игрушка</span></label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
 
-				<fieldset>
-					<legend>Цвет</legend>
-					<div class="checkbox-element">
-						<input type="checkbox" name="order-color" value="white" id="order-color-1" class="checkbox-element__field" checked disabled><label for="order-color-1">Белый</label><br>
-						<input type="checkbox" name="order-color" value="grey" id="order-color-2" class="checkbox-element__field" checked><label for="order-color-2">Серый</label><br>
-						<input type="checkbox" name="order-color" value="tiffany" id="order-color-3" class="checkbox-element__field"><label for="order-color-3">«Тиффани»</label><br>
-						<input type="checkbox" name="order-color" value="black" id="order-color-4" class="checkbox-element__field"><label for="order-color-4" class="checkbox-element__field">Черный</label><br>
-						<input type="checkbox" name="order-color" value="pink" id="order-color-5" class="checkbox-element__field"><label for="order-color-5">Розовый</label><br>
-						<input type="checkbox" name="order-color" value="orange" id="order-color-6" class="checkbox-element__field"><label for="order-color-6">Оранжевый</label>
-					</div>
-				</fieldset>
+				<div class="order-form__fieldset-wrap">
+					<fieldset>
+						<legend>Цвет</legend>
+						<div class="order-form__fields">
+							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+								<input type="checkbox" name="order-color" value="white" id="order-color-1" class="checkbox-element__field" checked><label for="order-color-1"><span class="checkbox-element__label-text">Белый</span></label>
+							</div>
+							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+								<input type="checkbox" name="order-color" value="grey" id="order-color-2" class="checkbox-element__field" checked><label for="order-color-2"><span class="checkbox-element__label-text">Серый</span></label>
+							</div>
+							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+								<input type="checkbox" name="order-color" value="tiffany" id="order-color-3" class="checkbox-element__field"><label for="order-color-3"><span class="checkbox-element__label-text">«Тиффани»</span></label>
+							</div>
+							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+								<input type="checkbox" name="order-color" value="black" id="order-color-4" class="checkbox-element__field"><label for="order-color-4" class="checkbox-element__field"><span class="checkbox-element__label-text">Черный</span></label>
+							</div>
+							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+								<input type="checkbox" name="order-color" value="pink" id="order-color-5" class="checkbox-element__field"><label for="order-color-5"><span class="checkbox-element__label-text">Розовый</span></label>
+							</div>
+							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+								<input type="checkbox" name="order-color" value="orange" id="order-color-6" class="checkbox-element__field"><label for="order-color-6"><span class="checkbox-element__label-text">Оранжевый</span></label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
 
-				<fieldset>
-					<legend>ФИО</legend>
-					<div class="text-element">
-						<label for="order-first-name">Имя:</label>
-						<input type="text" name="order-first-name" id="order-first-name" class="text-element__field" placeholder="Введите ваше имя" required>
-					</div>
+				<div class="order-form__fieldset-wrap">
+					<fieldset>
+						<legend>ФИО</legend>
+						<div class="order-form__fields">
+							<div class="text-element text-element--short-label">
+								<label for="order-first-name">Имя:</label>
+								<input type="text" name="order-first-name" id="order-first-name" class="text-element__field" placeholder="Введите ваше имя" required>
+							</div>
 
-					<div class="text-element">
-						<label for="order-second-name">Фамилия:</label>
-						<input type="text" name="order-second-name" id="order-second-name" class="text-element__field" placeholder="Укажите фамилию" required>
-					</div>
+							<div class="text-element">
+								<label for="order-second-name">Фамилия:</label>
+								<input type="text" name="order-second-name" id="order-second-name" class="text-element__field" placeholder="Укажите фамилию" required>
+							</div>
 
-					<div class="text-element">
-						<label for="order-middle-name">Отчество:</label>
-						<input type="text" name="order-middle-name" id="order-middle-name" class="text-element__field" placeholder="Отчество, если желаете">
-					</div>
-				</fieldset>
+							<div class="text-element">
+								<label for="order-middle-name">Отчество:</label>
+								<input type="text" name="order-middle-name" id="order-middle-name" class="text-element__field" placeholder="Отчество, если желаете">
+							</div>
+						</div>
+					</fieldset>
+				</div>
 
-				<fieldset>
-					<legend>Tел</legend>
-					<div class="text-element">
-						<input type="tel" name="order-phone" id="order-phone" class="text-element__field text-element__field--phone" placeholder="+7 ХХХ ХХ ХХ" required>
-					</div>
-				</fieldset>
+				<div class="order-form__fieldset-wrap order-form__fieldset-wrap--contacts">
+					<fieldset>
+						<legend>Tел</legend>
+						<div class="order-form__fields">
+							<div class="text-element">
+								<input type="tel" name="order-phone" id="order-phone" class="text-element__field text-element__field--phone" placeholder="+7 ХХХ ХХ ХХ" required>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>E-mail</legend>
+						<div class="order-form__fields">
+							<div class="text-element">
+								<input type="email" name="order-email" id="order-email" class="text-element__field text-element__field--email" placeholder="Ваш Email" required>
+							</div>
+						</div>
+					</fieldset>
+				</div>
 
-				<fieldset>
-					<legend>E-mail</legend>
-					<div class="text-element">
-						<input type="email" name="order-email" id="order-email" class="text-element__field text-element__field--email" placeholder="Ваш Email" required>
-					</div>
-				</fieldset>
+				<div class="order-form__fieldset-wrap">
+					<fieldset>
+						<legend>Доп</legend>
+						<div class="order-form__fields">
+							<div class="textarea-element">
+								<textarea name="order-message" id="order-message" class="textarea-element__field" rows="6" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
+							</div>
+						</div>
+					</fieldset>
+				</div>
 
-				<fieldset>
-					<legend>Доп</legend>
-					<div class="textarea-element">
-						<textarea name="order-message" id="order-message" class="textarea-element__field" rows="5" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
+				<div class="order-form__btn-wrap">
+					<div class="order-form__btn-inner">
+						<div class="order__info form-info-message">Все поля обязательны для заполнения</div>
+						<button class="order-form__btn btn btn--primary" type="submit">Отправить заказ</button>
 					</div>
-				</fieldset>
+				</div>
 
-				<div class="order__info form-info-message">Все поля обязательны для заполнения</div>
-				<button class="order-form__btn btn btn--primary" type="submit">Отправить заказ</button>
 			</form>
 		</div>
 	</main>
 
 	<footer class="page-footer">
 		<div class="page-footer__inner">
+			<div class="page-footer__logo">
+				<img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+			</div>
 			<p class="page-footer__social">
 				<span class="social-links">
 					<a class="social-link social-link--in" href="https://instagram.com/" title="Мы в Instagram" target="_blank">
@@ -163,7 +231,7 @@
 		</div>
 	</footer>
 
-	<section id="modal" class="modal-window" hidden>
+	<section id="modal" class="modal-window">
 		<div class="modal-window__inner">
 			<header class="modal-window__header">
 				<h2 class="modal-window__title">Добавить в корзину</h2>
@@ -181,5 +249,7 @@
 			</div>
 		</div>
 	</section>
+
+	<script src="js/app.js"></script>
 </body>
 </html>

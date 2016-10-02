@@ -1,24 +1,50 @@
 .video-block {
 	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
+	overflow: hidden;
 	height: 0;
+	padding-top: 5px;
+	padding-bottom: percentage(9 / 16);
+	text-align: center;
+	background-color: rgba($primary-color, .1);
+}
 
-	iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 1;
-		width: 100%;
-		height: 100%;
-		border: none;
+.video-block iframe {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.video-block svg {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 100px;
+	height: 76px;
+	margin: -38px 0 0 -50px;
+	transition: transform .25s;
+	&:hover {
+		transform: scale(1.2, 1.2);
 	}
+	&:active {
+		transform: scale(.8, .8);
+		opacity: .3;
+	}
+}
 
-	svg {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		z-index: 2;
-		transform: translate(-50%, -50%);
+@include tablet-only {
+	.video-block {
+		padding-top: 75px;
+	}
+}
+
+@include desktop {
+	.video-block {
+		padding-bottom: percentage(9 / 21);
 	}
 }

@@ -1,0 +1,30 @@
+.search-form__btn svg {
+	vertical-align: middle;
+}
+
+.search-form__btn path {
+	fill: $btn-search-color;
+}
+
+.search-form__btn:hover path {
+	fill: $primary-color-light;
+}
+
+.search-form__btn:active path {
+	fill: rgba($primary-color-light, .3);
+}
+
+.search-form__btn-text {
+	display: none;
+}
+
+.search-form--top .search-form__btn-text {
+	vertical-align: middle;
+	margin-left: 22px;
+}
+
+@include mobile-only {
+	.search-form--top .search-form__btn-text {
+		display: inline;
+	}
+}

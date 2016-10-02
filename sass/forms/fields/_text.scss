@@ -1,60 +1,101 @@
 .text-element {
 	margin-top: 15px;
-
 	&:first-of-type {
-		margin-top: 0;
+		margin-top: 5px;
 	}
-
-	label {
-		display: block;
-		font-size: 17px;
-		line-height: 20px;
-		font-weight: bold;
+	&:only-of-type {
+		margin-top: 0;
 	}
 }
 
+.text-element label {
+	display: block;
+	padding-top: 5px;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
 .text-element__field {
-	padding: 15px 0;
-	margin: 0;
+	box-sizing: border-box;
 	width: 100%;
-	border: none;
-	border-bottom: 2px solid $input-border;
+	margin: 0;
+	padding: 15px 0;
 	font-family: $font-family-base;
 	font-size: $input-font-size;
 	line-height: $input-line-height;
 	color: $input-active-color;
-	box-sizing: border-box;
-
+	border: none;
+	border-bottom: 2px solid $input-border;
+	background-color: transparent;
 	&::placeholder {
-		color: $input-placeholder-color;
 		opacity: 1;
+		color: $input-placeholder-color;
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
 		border-color: $input-active-border;
 	}
-
 	&:focus {
 		outline: none;
 	}
-
 	&:disabled,
 	&[readonly] {
-		border-color: $input-placeholder-color;
 		opacity: 1;
+		border-color: $input-placeholder-color;
 	}
-
-	&:invalid {
+	// &:invalid,
+	&--invalid {
 		border-color: $input-error-border;
 	}
-
 	&--email {
-		background: url('../img/icon-mail.svg') 100% 0 no-repeat;
+		padding-right: 40px;
+		background: url('../img/icon-mail.svg') 100% 50% no-repeat;
 	}
-
 	&--phone {
-		background: url('../img/icon-phone.svg') 100% 0 no-repeat;
+		padding-right: 30px;
+		background: url('../img/icon-phone.svg') 100% 50% no-repeat;
+	}
+}
+
+@include tablet {
+	.text-element {
+		margin-top: 24px;
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+	.text-element label {
+		display: inline-block;
+		width: 126px;
+		font-size: 19px;
+	}
+	.text-element--short-label label {
+		width: 72px;
+	}
+	.text-element__field {
+		padding-right: 60px;
+		padding-left: 17px;
+		font-size: 19px;
+		&--email,
+		&--phone {
+			background-position: 95% 50%;
+		}
+	}
+	.text-element label + .text-element__field {
+		width: calc(100% - 126px);
+	}
+	.text-element--short-label label + .text-element__field {
+		width: calc(100% - 72px);
+	}
+}
+
+@include desktop {
+	.text-element__field {
+		&--email,
+		&--phone {
+			background-position: 100% 50%;
+		}
 	}
 }

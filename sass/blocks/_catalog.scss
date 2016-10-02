@@ -1,0 +1,36 @@
+.catalog {
+	@include container;
+}
+
+.catalog__item {
+	margin-top: 30px;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+@include tablet {
+	.catalog {
+		padding-top: 40px;
+	}
+	.catalog__item {
+		margin-top: 54px;
+	}
+}
+
+@include desktop {
+	.catalog {
+		font-size: 0;
+		padding-top: 85px;
+	}
+	.catalog__item {
+		display: inline-block;
+		vertical-align: top;
+		width: 315px;
+		margin: 0 50px 50px 0;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+}

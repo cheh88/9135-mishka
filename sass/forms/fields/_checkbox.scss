@@ -1,70 +1,84 @@
+.checkbox-element {
+	margin-top: 22px;
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
 .checkbox-element__field {
 	display: none;
+}
 
-	+ label {
+.checkbox-element__field + label {
+	display: inline-block;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 18px;
+	vertical-align: middle;
+	color: #000;
+	&::before {
 		display: inline-block;
-		margin-bottom: 15px;
+		width: 22px;
+		height: 21px;
+		margin: 2px 22px 2px 2px;
+		content: '';
 		vertical-align: middle;
-		font-size: 17px;
-		line-height: 18px;
-		font-weight: bold;
-		color: #000;
-
+		border: 7px solid transparent;
+		box-shadow: 0 0 0 2px $input-border;
+	}
+	&:hover {
 		&::before {
-			content: '';
-			display: inline-block;
-			width: 20px;
-			height: 20px;
-			margin: 2px 22px 2px 0;
-			vertical-align: middle;
-			border: 7px solid #fff;
-			box-shadow: 0 0 0 2px $input-border;
-		}
-
-		&:hover {
-
-			&::before {
-				box-shadow: 0 0 0 2px $primary-color;
-			}
-		}
-
-		&:focus,
-		&:active {
-			outline: none;
-
-			&::before {
-				box-shadow: 0 0 0 2px $gray-lighten;
-			}
+			box-shadow: 0 0 0 2px $primary-color;
 		}
 	}
-
-	&:checked {
-
-		+ label {
-
-			&::before {
-				background: url('../img/icon-tick.svg') 0 0 no-repeat;
-				background-size: 20px 20px;
-			}
-		}
-
-		&:disabled {
-
-			+ label {
-
-				&::before {
-				}
-			}
+	&:focus,
+	&:active {
+		outline: none;
+		&::before {
+			box-shadow: 0 0 0 2px $gray-lighten;
 		}
 	}
+}
 
-	&:disabled {
+.checkbox-element__field:checked + label {
+	&::before {
+		background: url('../img/icon-tick.svg') 0 0 no-repeat;
+		background-size: 22px 21px;
+	}
+}
 
-		+ label {
+.checkbox-element__field:disabled + label {
+	&::before {
+		box-shadow: 0 0 0 2px $gray-lighten;
+	}
+}
 
-			&::before {
-				box-shadow: 0 0 0 2px $gray-lighten;
-			}
+@include tablet {
+	.checkbox-element:nth-child(2) {
+		margin-top: 0;
+	}
+	.checkbox-element__field + label {
+		&::before {
+			width: 32px;
+			height: 30px;
+			margin-right: 28px;
+			margin-bottom: 4px;
+			border-width: 9px;
+			// border-color: $body-bg-color;
 		}
+	}
+	.checkbox-element__field:checked + label {
+		&::before {
+			background-size: 32px 32px;
+		}
+	}
+	.checkbox-element__label-text {
+		font-size: 19px;
+	}
+}
+
+@include desktop {
+	.checkbox-element:nth-child(3) {
+		margin-top: 0;
 	}
 }
