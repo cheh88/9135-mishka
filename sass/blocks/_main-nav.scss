@@ -14,6 +14,7 @@
 	font-size: 0;
 	cursor: pointer;
 	border: none;
+	transition: 250ms transform;
 }
 
 .main-nav--closed .main-nav__toggle {
@@ -44,6 +45,7 @@
 }
 
 .main-nav--opened .main-nav__toggle {
+	transform: rotate(180deg);
 	&::before,
 	&::after {
 		position: absolute;
@@ -84,7 +86,7 @@
 
 .main-nav__link {
 	display: block;
-	padding: 27px 15px 27px 75px;
+	padding: 27px 0 27px 75px;
 	font-size: 17px;
 	font-weight: bold;
 	line-height: 24px;
@@ -129,6 +131,8 @@
 	.main-nav--nojs .main-nav__wrapper {
 		position: static;
 		display: block;
+		margin-right: 0;
+		margin-left: 0;
 	}
 	.main-nav__item {
 		border-top: 1px solid $gray-lightest;
