@@ -1,15 +1,11 @@
-.top-categories {
-	margin: 0 auto;
-}
-
 .top-categories__item {
 	display: block;
 	box-sizing: border-box;
 	padding: 21px $mobile-gutter;
-	color: #fff;
-	background-color: $primary-color-light;
 	font-size: 19px;
 	line-height: 24px;
+	color: #fff;
+	background-color: $primary-color-light;
 
 	@include clearfix;
 	&:hover,
@@ -61,14 +57,13 @@
 @include tablet {
 	.top-categories {
 		width: $tablet-width - ($tablet-gutter * 2);
-
-		@include clearfix;
+		margin: 0 auto;
+		display: flex;
+		min-height: 119px;
 	}
 	.top-categories__item {
-		float: left;
 		width: 50%;
-		min-height: 119px;
-		padding: 25px 35px;
+		padding: 30px 35px 25px;
 	}
 	.top-categories__item-title {
 		font-size: 20px;

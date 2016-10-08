@@ -70,15 +70,14 @@
 		@include clearfix;
 	}
 	.featured__header {
+		display: flex;
+		flex-wrap: wrap;
 		margin-bottom: 50px;
-
-		@include clearfix;
 	}
 	.featured__title {
-		float: left;
+		flex-grow: 1;
 	}
 	.featured__label {
-		float: right;
 		margin: 12px 28px 0 0;
 		text-align: center;
 	}
@@ -119,6 +118,7 @@
 		padding-bottom: 60px;
 	}
 	.featured__header {
+		display: block;
 		position: absolute;
 		top: 52px;
 		left: 0;
