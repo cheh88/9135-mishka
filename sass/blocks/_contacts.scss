@@ -7,7 +7,7 @@
 }
 
 .contacts__location {
-	margin-bottom: 40px;
+	margin: 5px 0 40px;
 }
 
 .contacts__items {
@@ -67,7 +67,7 @@
 @include tablet {
 	.contacts__title {
 		padding: 15px 0;
-		margin-bottom: 30px;
+		margin-bottom: 34px;
 		background: url('../img/icon-flag.svg') right top no-repeat;
 	}
 
@@ -76,7 +76,12 @@
 	}
 
 	.contacts__location {
-		margin: 30px 0 55px;
+		margin: 25px 0 55px;
+	}
+
+	.contacts__write {
+		padding-right: 39px;
+		padding-left: 39px;
 	}
 }
 

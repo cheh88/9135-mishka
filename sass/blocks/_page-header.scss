@@ -5,24 +5,29 @@
 .page-header__top {
 	position: relative;
 	z-index: 2;
-	min-height: 78px;
 	border-top: 1px solid $gray-lightest;
 	border-bottom: 1px solid $gray-lightest;
 }
 
 .page-header__top-wrapper {
+	position: relative;
+	min-height: 57px;
+	padding-top: 21px;
+
 	@include container;
 }
 
 .page-header__logo {
-	margin-top: 21px;
 	text-align: center;
 }
 
 @include tablet {
 	.page-header__top-wrapper {
-		position: relative;
 		display: flex;
+		padding-top: 0;
+	}
+	.page-header__logo {
+		margin-top: 21px;
 	}
 }
 

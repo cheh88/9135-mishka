@@ -25,24 +25,27 @@
 }
 
 .about-us__item-title {
-	margin: 0;
 	line-height: 20px;
+	margin: 0;
 }
 
 @include tablet {
 	.about-us {
-		padding: 45px 0 70px;
+		padding: 45px 0 76px;
 	}
 	.about-us__body {
 		display: flex;
+
 		flex-wrap: wrap;
 	}
 	.about-us__items {
-		flex: 0 0 calc(50% - 95px);
 		margin-right: 95px;
+
+		flex: 0 0 calc(50% - 95px);
 		&:nth-child(even) {
-			flex-basis: calc(50% - 40px);
 			margin-right: 40px;
+
+			flex-basis: calc(50% - 40px);
 		}
 	}
 	.about-us__item {

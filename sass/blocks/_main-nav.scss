@@ -1,19 +1,18 @@
 .main-nav__toggle {
+	font-size: 0;
 	position: absolute;
 	z-index: 2;
-	top: -38px;
+	top: 28px;
 	right: 0;
 	display: block;
 	width: 25px;
 	height: 25px;
-	font-size: 0;
 	cursor: pointer;
 	transition: 250ms transform;
 	border: none;
 }
 
 .main-nav--closed .main-nav__toggle {
-	top: -35px;
 	width: 20px;
 	height: 20px;
 	&::before {
@@ -80,11 +79,11 @@
 }
 
 .main-nav__link {
-	display: block;
-	padding: 27px 0 27px 75px;
 	font-size: 17px;
 	font-weight: bold;
 	line-height: 24px;
+	display: block;
+	padding: 27px 10px 27px 75px;
 }
 
 .main-nav__item--search .main-nav__link,
@@ -102,9 +101,6 @@
 }
 
 @include mobile-only {
-	.main-nav {
-		position: relative;
-	}
 	.main-nav__wrapper {
 		margin-right: -$mobile-gutter;
 		margin-left: -$mobile-gutter;
@@ -118,9 +114,10 @@
 	.main-nav--opened .main-nav__wrapper {
 		position: absolute;
 		z-index: 10;
-		top: 17px;
+		top: 100%;
 		right: 0;
 		left: 0;
+		margin-top: 1px;
 		background-color: $main-bg-color;
 	}
 	.main-nav--nojs .main-nav__toggle {
@@ -185,7 +182,6 @@
 	}
 	.main-nav__items--secondary .main-nav__item {
 		margin-right: 0;
-		text-align: right;
 		&--delivery {
 			display: block;
 		}
@@ -196,8 +192,11 @@
 	/* Menu Link */
 	.main-nav__items--primary .main-nav__link,
 	.main-nav__items--secondary .main-nav__link {
-		padding: 0;
 		font-size: 15px;
+		padding: 0;
+	}
+	.main-nav__items--secondary .main-nav__link {
+		text-align: right;
 	}
 	.main-nav__item--search .main-nav__link {
 		width: 82px;
@@ -206,7 +205,7 @@
 		border-top: none;
 	}
 	.main-nav__item--cart .main-nav__link {
-		padding: 30px 37px 33px 37px;
+		padding: 30px 37px 33px 31px;
 		border-top: none;
 	}
 	.main-nav__items--services .main-nav__item:last-child .main-nav__link {
@@ -218,15 +217,12 @@
 }
 
 @include desktop {
-	.main-nav__wrapper {
-		display: flex;
-	}
 	.main-nav__items--primary {
 		position: static;
 		top: auto;
 		left: auto;
-		margin-top: 0;
 		width: 450px;
+		margin-top: 0;
 	}
 	.main-nav__items--secondary {
 		right: auto;
@@ -236,6 +232,7 @@
 	}
 	.main-nav__items--services {
 		width: 450px;
+
 		justify-content: flex-end;
 	}
 	/* Menu Item */
@@ -249,7 +246,6 @@
 	.main-nav__items--secondary .main-nav__item {
 		display: block;
 		margin-right: 60px;
-		text-align: left;
 		&--delivery {
 			margin-right: 0;
 			margin-left: auto;
@@ -257,10 +253,13 @@
 	}
 	/* Menu Link */
 	.main-nav__items--primary .main-nav__link {
-		padding: 31px 37px 33px 35px;
 		font-size: 17px;
+		padding: 31px 37px 33px 35px;
 	}
 	.main-nav__items--primary .main-nav__item:first-child .main-nav__link {
 		padding-left: 0;
+	}
+	.main-nav__items--secondary .main-nav__link {
+		text-align: left;
 	}
 }

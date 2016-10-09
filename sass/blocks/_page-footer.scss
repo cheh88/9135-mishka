@@ -12,7 +12,7 @@
 }
 
 .page-footer__social {
-	margin-bottom: 20px;
+	margin-bottom: 22px;
 }
 
 .page-footer__copyright svg {
@@ -53,26 +53,15 @@
 		padding: 55px 0 20px;
 	}
 	.page-footer__inner {
-		@include clearfix;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 	.page-footer__logo {
 		display: block;
-		float: left;
 	}
 	.page-footer__social {
-		display: inline-block;
-		width: $tablet-col * 2;
-		vertical-align: top;
-		border-bottom: none;
 		margin-bottom: 0;
-	}
-	.page-footer__copyright {
-		float: right;
-	}
-}
-
-@include desktop {
-	.page-footer__social {
-		width: $desktop-col * 2;
+		border-bottom: none;
 	}
 }
