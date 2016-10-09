@@ -1,7 +1,7 @@
 .product__inner {
-	padding: 20px 27px 27px;
-	border: 1px solid $gray-lightest;
+	padding: 18px 27px 27px;
 	transition: box-shadow .25s;
+	border: 1px solid $gray-lightest;
 }
 
 .product:hover .product__inner {
@@ -20,57 +20,53 @@
 	vertical-align: top;
 }
 
+.product__title {
+	font-size: 17px;
+	line-height: 24px;
+}
+
 .product__details {
 	font-size: 13px;
 }
 
 .product__footer {
+	display: flex;
+	justify-content: space-between;
 	margin-top: 25px;
-	padding-top: 20px;
+	padding-top: 21px;
 	border-top: 1px solid $gray-lightest;
-
-	@include clearfix;
-}
-
-.product__price {
-	float: left;
-}
-
-.product__more-link {
-	float: right;
 }
 
 @include tablet-only {
 	.product__thumbnail {
-		float: left;
-		width: $tablet-col * 2;
+		width: 50%;
 		min-height: 334px;
 	}
 }
 
 @include tablet {
 	.product {
-		@include clearfix;
+		display: flex;
 	}
 	.product__thumbnail {
 		text-align: center;
 		background-color: rgba($primary-color, .1);
 	}
 	.product__inner {
-		position: relative;
-		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		width: 50%;
 		box-sizing: border-box;
-		min-height: 334px;
+		padding: 15px 27px 25px;
+	}
+	.product__title {
+		font-size: 20px;
 	}
 	.product__details {
 		font-size: 15px;
-		line-height: 30px;
 	}
 	.product__footer {
-		position: absolute;
-		left: 27px;
-		right: 27px;
-		bottom: 25px;
+		margin-top: auto;
 	}
 	.product__price {
 		font-size: 17px;
@@ -78,13 +74,22 @@
 }
 
 @include desktop {
+	.product {
+		flex-direction: column;
+	}
 	.product__inner {
-		min-height: 197px;
+		padding-top: 20px;
+		flex-grow: 1;
+		width: auto;
 	}
 	.product__thumbnail {
 		min-height: 462px;
 	}
 	.product__title {
 		margin: 5px 0;
+	}
+	.product__details {
+		line-height: 30px;
+		margin-bottom: 15px;
 	}
 }
