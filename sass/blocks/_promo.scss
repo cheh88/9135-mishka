@@ -14,10 +14,8 @@
 .promo__text {
 	font-size: 27px;
 	line-height: 30px;
-	position: absolute;
-	top: 25%;
-	left: 0;
-	width: 100%;
+	padding-top: 27%;
+	padding-bottom: 20px;
 	margin: 0;
 	text-align: center;
 	color: $heading-color;
@@ -30,7 +28,7 @@
 	.promo__text {
 		font-size: 43px;
 		line-height: 50px;
-		top: 24%;
+		padding-top: 23%;
 	}
 	.promo__text br:first-child {
 		display: none;
@@ -41,5 +39,6 @@
 	.promo__text {
 		font-size: 53px;
 		line-height: 57px;
+		padding-top: 14%;
 	}
 }

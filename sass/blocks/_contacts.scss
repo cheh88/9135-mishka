@@ -7,10 +7,11 @@
 }
 
 .contacts__items {
+	display: flex;
+	flex-wrap: wrap;
 	font-size: 15px;
 	line-height: 30px;
 	margin: 0;
-	@include clearfix;
 }
 
 .contacts__items a {
@@ -31,19 +32,21 @@
 }
 
 .contacts__field {
-	float: left;
 	width: 78px;
 	margin: 0;
+	flex-shrink: 0;
 }
 
 .contacts__value {
+	width: calc(100% - 78px);
 	margin: 0 0 30px;
-	overflow: hidden;
 }
 
 @include mobile-only {
 	.contacts__wrap {
-		@include container;
+		width: $mobile-width - ($mobile-gutter * 2);
+		margin-right: auto;
+		margin-left: auto;
 	}
 	.contacts__title {
 		font-size: 18px;
@@ -53,8 +56,13 @@
 }
 
 @include tablet-only {
+	.contacts__wrap {
+		width: $tablet-width - ($tablet-gutter * 2);
+		margin-right: auto;
+		margin-left: auto;
+	}
+
 	.contacts__value {
-		float: left;
 		width: calc( (#{$tablet-col}*2) - 78px );
 	}
 
@@ -100,7 +108,7 @@
 	}
 
 	.contacts__wrap {
-		width: $desktop-col * 2;
+		width: $desktop-col * 1.8;
 		float: left;
 		padding-left: $desktop-col;
 
