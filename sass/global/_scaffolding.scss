@@ -2,22 +2,17 @@ body {
 	font-family: $font-family-base;
 	font-size: $font-size-base;
 	line-height: $line-height-base;
-
 	min-width: $mobile-width;
-
 	color: $body-text-color;
 	background-color: $body-bg-color;
 }
 
 a {
 	font-weight: bold;
-
 	text-decoration: $link-decoration;
-
 	color: $link-color;
 	&:hover {
 		text-decoration: $link-hover-decoration;
-
 		color: $link-hover-color;
 	}
 	&:active {

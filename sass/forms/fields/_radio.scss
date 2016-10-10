@@ -10,21 +10,25 @@
 }
 
 .radio-element__field + label {
-	display: block;
 	font-size: 17px;
 	font-weight: bold;
 	line-height: 18px;
+	display: flex;
 	color: #000;
+
+	align-items: center;
 	&::before {
 		display: inline-block;
 		width: 16px;
 		height: 16px;
-		margin: 2px;
+		margin: 2px 2px 2px 4px;
 		content: '';
 		vertical-align: middle;
 		border: 9px solid #fff;
 		border-radius: 50%;
 		box-shadow: 0 0 0 2px $input-border;
+
+		flex-shrink: 0;
 	}
 	&:hover {
 		&::before {
@@ -59,16 +63,13 @@
 }
 
 .radio-element__label-text {
-	display: inline-block;
-	width: calc(100% - 58px);
 	padding-top: 5px;
-	vertical-align: middle;
 }
 
 @include mobile-only {
 	.radio-element__field + label {
 		&::before {
-			margin-right: 22px;
+			margin-right: 26px;
 		}
 	}
 }
@@ -78,6 +79,7 @@
 		margin-top: 25px;
 	}
 	.radio-element__field + label {
+		display: inline;
 		&::before {
 			width: 20px;
 			height: 20px;
@@ -86,7 +88,7 @@
 		}
 	}
 	.radio-element__label-text {
-		width: calc(100% - 80px);
 		font-size: 19px;
+		padding-top: 0;
 	}
 }

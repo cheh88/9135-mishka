@@ -11,6 +11,7 @@
 
 		<div class="page-header__top">
 			<div class="page-header__top-wrapper">
+
 				<div class="page-header__logo">
 					<a href="index.html" class="page-header__logo-link">
 						<img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
@@ -62,7 +63,8 @@
 						</ul>
 
 					</div>
-				</nav>
+				</nav><!--.main-nav-->
+
 			</div>
 		</div>
 
@@ -74,113 +76,114 @@
 			<header class="page-title__header">
 				<h1 class="page-title__heading">Вязание на заказ</h1>
 			</header>
-		</section>
+		</section><!--.page-title-->
 
 		<div class="page-main__inner">
+
 			<form class="order-form" action="#" method="post">
 				<div class="order-form__desc">
-					<div class="order-form__desc-wrapper">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</div>
+					<p class="order-form__desc-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 				</div>
-				<div class="order-form__fieldset-wrap">
-					<fieldset>
-						<legend>Тип</legend>
-						<div class="order-form__fields">
-							<div class="order-form__field-item radio-element">
+
+				<fieldset>
+					<div class="order-form__fieldset-wrap fieldset">
+						<h3 class="fieldset__legend">Тип</h3>
+						<div class="fieldset__content">
+							<div class="fieldset__item radio-element">
 								<input type="radio" name="order-type" id="order-type-1" class="radio-element__field" value="accessory" checked><label for="order-type-1"><span class="radio-element__label-text">Аксессуар для интерьера</span></label>
 							</div>
-							<div class="order-form__field-item radio-element">
+							<div class="fieldset__item radio-element">
 								<input type="radio" name="order-type" id="order-type-2" class="radio-element__field" value="toy"><label for="order-type-2"><span class="radio-element__label-text">Детская игрушка</span></label>
 							</div>
 						</div>
-					</fieldset>
-				</div>
+					</div>
+				</fieldset>
 
-				<div class="order-form__fieldset-wrap">
-					<fieldset>
-						<legend>Цвет</legend>
-						<div class="order-form__fields">
-							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+				<fieldset>
+					<div class="order-form__fieldset-wrap fieldset">
+						<h3 class="fieldset__legend">Цвет</h3>
+						<div class="fieldset__content fieldset__content--cols">
+							<div class="fieldset__item checkbox-element">
 								<input type="checkbox" name="order-color" value="white" id="order-color-1" class="checkbox-element__field" checked><label for="order-color-1"><span class="checkbox-element__label-text">Белый</span></label>
 							</div>
-							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+							<div class="fieldset__item checkbox-element">
 								<input type="checkbox" name="order-color" value="grey" id="order-color-2" class="checkbox-element__field" checked><label for="order-color-2"><span class="checkbox-element__label-text">Серый</span></label>
 							</div>
-							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+							<div class="fieldset__item checkbox-element">
 								<input type="checkbox" name="order-color" value="tiffany" id="order-color-3" class="checkbox-element__field"><label for="order-color-3"><span class="checkbox-element__label-text">«Тиффани»</span></label>
 							</div>
-							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+							<div class="fieldset__item checkbox-element">
 								<input type="checkbox" name="order-color" value="black" id="order-color-4" class="checkbox-element__field"><label for="order-color-4" class="checkbox-element__field"><span class="checkbox-element__label-text">Черный</span></label>
 							</div>
-							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+							<div class="fieldset__item checkbox-element">
 								<input type="checkbox" name="order-color" value="pink" id="order-color-5" class="checkbox-element__field"><label for="order-color-5"><span class="checkbox-element__label-text">Розовый</span></label>
 							</div>
-							<div class="order-form__field-item order-form__field-item--short checkbox-element">
+							<div class="fieldset__item checkbox-element">
 								<input type="checkbox" name="order-color" value="orange" id="order-color-6" class="checkbox-element__field"><label for="order-color-6"><span class="checkbox-element__label-text">Оранжевый</span></label>
 							</div>
 						</div>
-					</fieldset>
-				</div>
+					</div>
+				</fieldset>
 
-				<div class="order-form__fieldset-wrap">
-					<fieldset>
-						<legend>ФИО</legend>
-						<div class="order-form__fields">
-							<div class="text-element text-element--short-label">
+				<fieldset>
+					<div class="order-form__fieldset-wrap fieldset">
+						<h3 class="fieldset__legend">ФИО</h3>
+						<div class="fieldset__content">
+							<div class="fieldset__item text-element">
 								<label for="order-first-name">Имя:</label>
 								<input type="text" name="order-first-name" id="order-first-name" class="text-element__field" placeholder="Введите ваше имя" required>
 							</div>
 
-							<div class="text-element">
+							<div class="fieldset__item text-element">
 								<label for="order-second-name">Фамилия:</label>
 								<input type="text" name="order-second-name" id="order-second-name" class="text-element__field" placeholder="Укажите фамилию" required>
 							</div>
 
-							<div class="text-element">
+							<div class="fieldset__item text-element">
 								<label for="order-middle-name">Отчество:</label>
 								<input type="text" name="order-middle-name" id="order-middle-name" class="text-element__field" placeholder="Отчество, если желаете">
 							</div>
 						</div>
-					</fieldset>
-				</div>
+					</div>
+				</fieldset>
 
-				<div class="order-form__fieldset-wrap order-form__fieldset-wrap--contacts">
-					<fieldset>
-						<legend>Tел</legend>
-						<div class="order-form__fields">
-							<div class="text-element">
+				<fieldset>
+					<div class="order-form__fieldset-wrap fieldset fieldset--contacts fieldset--tel">
+						<h3 class="fieldset__legend">Tел</h3>
+						<div class="fieldset__content">
+							<div class="fieldset__item text-element">
 								<input type="tel" name="order-phone" id="order-phone" class="text-element__field text-element__field--phone" placeholder="+7 ХХХ ХХ ХХ" required>
 							</div>
 						</div>
-					</fieldset>
-					<fieldset>
-						<legend>E-mail</legend>
-						<div class="order-form__fields">
-							<div class="text-element">
+					</div>
+					<div class="order-form__fieldset-wrap fieldset fieldset--contacts">
+						<h3 class="fieldset__legend">E-mail</h3>
+						<div class="fieldset__content">
+							<div class="fieldset__item text-element">
 								<input type="email" name="order-email" id="order-email" class="text-element__field text-element__field--email" placeholder="Ваш Email" required>
 							</div>
 						</div>
-					</fieldset>
-				</div>
+					</div>
+				</fieldset>
 
-				<div class="order-form__fieldset-wrap">
-					<fieldset>
-						<legend>Доп</legend>
-						<div class="order-form__fields">
-							<div class="textarea-element">
+				<fieldset>
+					<div class="order-form__fieldset-wrap fieldset fieldset--comment">
+						<h3 class="fieldset__legend">Доп</h3>
+						<div class="fieldset__content">
+							<div class="fieldset__item textarea-element">
 								<textarea name="order-message" id="order-message" class="textarea-element__field" rows="6" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
 							</div>
 						</div>
-					</fieldset>
-				</div>
+					</div>
+				</fieldset>
 
-				<div class="order-form__btn-wrap">
-					<div class="order-form__btn-inner">
+				<div class="order-form__btns">
 						<div class="order__info form-info-message">Все поля обязательны для заполнения</div>
 						<button class="order-form__btn btn btn--primary" type="submit">Отправить заказ</button>
-					</div>
 				</div>
 
-			</form>
+			</form><!--.order-form-->
+
 		</div>
 	</main>
 
@@ -189,6 +192,7 @@
 			<div class="page-footer__logo">
 				<img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
 			</div>
+
 			<p class="page-footer__social">
 				<span class="social-links">
 					<a class="social-link social-link--in" href="https://instagram.com/" title="Мы в Instagram" target="_blank">
@@ -218,8 +222,9 @@
 							</g>
 						</svg>
 					</a>
-				</span>
+				</span><!--.social-links-->
 			</p>
+
 			<p class="page-footer__copyright">
 				<a class="page-footer__copyright-link" href="https://htmlacademy.ru/" target="_blank">
 					Разработано
@@ -228,6 +233,7 @@
 					</svg>
 				</a>
 			</p>
+
 		</div>
 	</footer>
 
@@ -248,7 +254,7 @@
 				</form>
 			</div>
 		</div>
-	</section>
+	</section><!--.modal-window-->
 
 	<script src="js/app.js"></script>
 </body>

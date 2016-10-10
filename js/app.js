@@ -16,3 +16,23 @@
 	});
 
 })();
+
+function initMap() {
+	var center = {
+		lat: 59.936213, lng: 30.322656
+	},
+	map, marker;
+
+	map = new google.maps.Map( document.getElementById( 'map' ), {
+		center: center,
+		scrollwheel: false,
+		draggable: false,
+		zoom: 16
+	} );
+
+	marker = new google.maps.Marker({
+		position: center,
+		icon: 'img/icon-map-pin.svg',
+		map: map
+	});
+}

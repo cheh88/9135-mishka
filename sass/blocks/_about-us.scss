@@ -1,5 +1,5 @@
 .about-us {
-	padding: 25px 0 55px;
+	padding: 25px 0 53px;
 }
 
 .about-us__wrap {
@@ -25,25 +25,27 @@
 }
 
 .about-us__item-title {
-	margin: 0;
 	line-height: 20px;
+	margin: 0;
 }
 
 @include tablet {
 	.about-us {
-		padding: 45px 0 70px;
+		padding: 45px 0 76px;
 	}
 	.about-us__body {
-		@include clearfix;
+		display: flex;
+
+		flex-wrap: wrap;
 	}
 	.about-us__items {
-		float: left;
-		width: 50%;
-		width: calc(50% - 95px);
 		margin-right: 95px;
+
+		flex: 0 0 calc(50% - 95px);
 		&:nth-child(even) {
-			width: calc(50% - 40px);
 			margin-right: 40px;
+
+			flex-basis: calc(50% - 40px);
 		}
 	}
 	.about-us__item {
@@ -62,7 +64,7 @@
 
 @include desktop {
 	.about-us {
-		padding-bottom: 75px;
+		padding-bottom: 85px;
 	}
 	.about-us__title {
 		margin-bottom: 15px;
@@ -71,5 +73,10 @@
 	.about-us__body {
 		padding-right: $desktop-col;
 		padding-left: $desktop-col;
+	}
+	.about-us__item {
+		&:first-child {
+			margin-top: 28px;
+		}
 	}
 }

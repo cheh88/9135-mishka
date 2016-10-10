@@ -1,36 +1,17 @@
-.order-form__fieldset-wrap {
-	margin-top: 22px;
+.order-form {
+	padding-bottom: 16px;
 }
 
 .order-form fieldset {
 	margin: 0;
 	padding: 0;
 	border: none;
-	border-top: 1px solid $primary-color;
 }
 
-.order-form fieldset + fieldset {
-	margin-top: 32px;
-}
-
-.order-form legend {
-	min-width: 62px;
-	margin-bottom: 20px;
-	padding-right: 7px;
-	font-size: 17px;
-	font-weight: bold;
-	text-transform: uppercase;
-	color: $primary-color-light;
-}
-
-.order-form__fieldset-wrap--contacts legend {
-	margin-bottom: 4px;
-}
-
-.order-form__desc {
-	margin-bottom: 12px;
+.order-form__desc-text {
 	font-size: 13px;
 	line-height: 24px;
+	margin-bottom: 14px;
 }
 
 .order-form__btn {
@@ -48,73 +29,51 @@
 }
 
 @include tablet {
+	.order-form {
+		padding-top: 30px;
+		padding-bottom: 0;
+	}
 	.order-form__desc {
 		width: $tablet-width - ($tablet-gutter * 2);
-		margin: 0 auto 8px;
-		padding-top: 38px;
+		margin: 0 auto;
+	}
+	.order-form__desc-text {
 		font-size: 17px;
 		line-height: 30px;
-	}
-	.order-form__desc-wrapper {
 		margin-bottom: 8px;
 	}
 	.order-form fieldset {
-		border-top: none;
-
-		@include clearfix;
-	}
-	.order-form legend {
-		display: block;
-		float: left;
-		width: $tablet-col;
-		margin-top: 10px;
-		padding: 0;
-	}
-	.order-form__fieldset-wrap {
-		margin-top: 0;
-		padding: 48px 0 52px;
-		&:nth-of-type(odd) {
+		padding: 48px 0 60px;
+		&:first-of-type {
+			padding-bottom: 52px;
+		}
+		&:nth-of-type(even) {
 			padding: 60px 0;
 			background-color: $body-bg-color;
 		}
-		&:last-of-type {
-			background-color: transparent;
-		}
 	}
-	.order-form fieldset {
+	.order-form__fieldset-wrap {
 		width: $tablet-width - ($tablet-gutter * 2);
 		margin-right: auto;
 		margin-left: auto;
 	}
-	.order-form__fieldset-wrap--contacts fieldset + fieldset {
-		margin-top: 24px;
-	}
-	.order-form__fields {
-		overflow: hidden;
-		font-size: 0;
-	}
-	.order-form__field-item {
-		&--short {
-			display: inline-block;
-			width: 50%;
-			vertical-align: top;
-		}
-	}
-	.order-form__btn-wrap {
+	.order-form__btns {
+		display: flex;
 		width: $tablet-width - ($tablet-gutter * 2);
 		margin-right: auto;
 		margin-left: auto;
-	}
-	.order-form__btn-inner {
-		@include clearfix;
+
+		justify-content: space-between;
+		align-items: center;
 	}
 	.order__info {
-		float: right;
 		width: 50%;
+		padding: 0;
 		text-align: right;
+
+		order: 1;
 	}
 	.order-form__btn {
-		float: left;
 		width: auto;
 		padding-right: 31px;
 		padding-left: 31px;
@@ -122,26 +81,22 @@
 }
 
 @include desktop {
+	.order-form {
+		padding-top: 76px;
+	}
 	.order-form__desc,
-	.order-form__btn-wrap,
-	.order-form fieldset {
+	.order-form__btns,
+	.order-form__fieldset-wrap {
 		width: $desktop-width - ($desktop-gutter * 2);
 	}
-	.order-form__desc-wrapper,
-	.order-form__btn-inner {
+	.order-form__desc-text {
 		padding-right: $desktop-col;
 		padding-left: $desktop-col;
 	}
-	.order-form__fields {
+	.order-form__btns {
+		box-sizing: border-box;
+		padding-top: 40px;
 		padding-right: $desktop-col;
-	}
-	.order-form legend {
-		width: $desktop-col;
-		text-align: center;
-	}
-	.order-form__field-item {
-		&--short {
-			width: 33.3%;
-		}
+		padding-left: $desktop-col;
 	}
 }

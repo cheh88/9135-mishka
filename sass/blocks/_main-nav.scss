@@ -1,23 +1,18 @@
-.main-nav {
-	position: relative;
-	z-index: 1;
-}
-
 .main-nav__toggle {
+	font-size: 0;
 	position: absolute;
 	z-index: 2;
-	top: -38px;
+	top: 28px;
 	right: 0;
 	display: block;
 	width: 25px;
 	height: 25px;
-	font-size: 0;
 	cursor: pointer;
+	transition: 250ms transform;
 	border: none;
 }
 
 .main-nav--closed .main-nav__toggle {
-	top: -35px;
 	width: 20px;
 	height: 20px;
 	&::before {
@@ -44,6 +39,7 @@
 }
 
 .main-nav--opened .main-nav__toggle {
+	transform: rotate(180deg);
 	&::before,
 	&::after {
 		position: absolute;
@@ -83,11 +79,11 @@
 }
 
 .main-nav__link {
-	display: block;
-	padding: 27px 15px 27px 75px;
 	font-size: 17px;
 	font-weight: bold;
 	line-height: 24px;
+	display: block;
+	padding: 27px 10px 27px 75px;
 }
 
 .main-nav__item--search .main-nav__link,
@@ -118,9 +114,10 @@
 	.main-nav--opened .main-nav__wrapper {
 		position: absolute;
 		z-index: 10;
-		top: 17px;
+		top: 100%;
 		right: 0;
 		left: 0;
+		margin-top: 1px;
 		background-color: $main-bg-color;
 	}
 	.main-nav--nojs .main-nav__toggle {
@@ -129,6 +126,8 @@
 	.main-nav--nojs .main-nav__wrapper {
 		position: static;
 		display: block;
+		margin-right: 0;
+		margin-left: 0;
 	}
 	.main-nav__item {
 		border-top: 1px solid $gray-lightest;
@@ -140,60 +139,77 @@
 
 @include tablet {
 	.main-nav {
-		@include clearfix;
+		flex-grow: 1;
 	}
 	.main-nav__toggle {
 		display: none;
 	}
+	.main-nav__wrapper {
+		display: flex;
+
+		flex-wrap: wrap;
+	}
 	.main-nav__items {
-		@include clearfix;
+		display: flex;
+
+		flex-wrap: wrap;
 		&--primary {
 			position: absolute;
 			top: 100%;
 			left: 0;
-			margin-top: 18px;
+			width: 60%;
+			margin-top: 17px;
 		}
 		&--secondary {
 			position: absolute;
 			top: 100%;
 			right: 0;
-			margin-top: 18px;
+			flex-direction: column;
+			width: 40%;
+			margin-top: 17px;
 		}
 		&--services {
-			float: right;
+			margin-left: auto;
 		}
 	}
 	/* Menu Item */
 	.main-nav__item {
-		float: left;
-		margin-left: 36px;
-		&:first-child {
-			margin-left: 0;
+		margin-right: 36px;
+		&--search,
+		&--cart {
+			border-left: 1px solid $gray-lightest;
 		}
 	}
-	.main-nav__items--secondary .main-nav__item--delivery {
-		display: block;
+	.main-nav__items--secondary .main-nav__item {
+		margin-right: 0;
+		&--delivery {
+			display: block;
+		}
 	}
 	.main-nav__items--services .main-nav__item {
-		margin-left: 0;
+		margin-right: 0;
 	}
 	/* Menu Link */
 	.main-nav__items--primary .main-nav__link,
 	.main-nav__items--secondary .main-nav__link {
-		padding: 0;
 		font-size: 15px;
+		padding: 0;
+	}
+	.main-nav__items--secondary .main-nav__link {
+		text-align: right;
 	}
 	.main-nav__item--search .main-nav__link {
 		width: 82px;
 		padding: 30px 0 34px;
 		text-align: center;
 		border-top: none;
-		border-left: 1px solid $gray-lightest;
 	}
 	.main-nav__item--cart .main-nav__link {
-		padding: 30px 0 33px 35px;
+		padding: 30px 37px 33px 31px;
 		border-top: none;
-		border-left: 1px solid $gray-lightest;
+	}
+	.main-nav__items--services .main-nav__item:last-child .main-nav__link {
+		padding-right: 0;
 	}
 	.main-nav__item--delivery .main-nav__link {
 		font-weight: normal;
@@ -205,17 +221,23 @@
 		position: static;
 		top: auto;
 		left: auto;
-		float: left;
+		width: 450px;
 		margin-top: 0;
 	}
 	.main-nav__items--secondary {
 		right: auto;
 		left: 0;
+		flex-direction: row;
 		width: 100%;
+	}
+	.main-nav__items--services {
+		width: 450px;
+
+		justify-content: flex-end;
 	}
 	/* Menu Item */
 	.main-nav__items--primary .main-nav__item {
-		margin-left: 0;
+		margin-right: 0;
 		border-left: 1px solid $gray-lightest;
 		&:first-child {
 			border-left: none;
@@ -223,20 +245,21 @@
 	}
 	.main-nav__items--secondary .main-nav__item {
 		display: block;
-		margin-left: 60px;
-		&:first-child {
-			margin-left: 0;
+		margin-right: 63px;
+		&--delivery {
+			margin-right: 0;
+			margin-left: auto;
 		}
 	}
-	.main-nav__items--secondary .main-nav__item--delivery {
-		float: right;
-	}
 	/* Menu Link */
-	.main-nav__item:first-child .main-nav__link {
+	.main-nav__items--primary .main-nav__link {
+		font-size: 17px;
+		padding: 31px 37px 33px 35px;
+	}
+	.main-nav__items--primary .main-nav__item:first-child .main-nav__link {
 		padding-left: 0;
 	}
-	.main-nav__items--primary .main-nav__link {
-		padding: 32px 35px;
-		font-size: 17px;
+	.main-nav__items--secondary .main-nav__link {
+		text-align: left;
 	}
 }

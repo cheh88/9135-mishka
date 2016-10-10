@@ -26,20 +26,20 @@
 	display: block;
 	width: 100px;
 	height: 76px;
-	margin: -38px 0 0 -50px;
 	transition: transform .25s;
+	transform: translate(-50%, -50%);
 	&:hover {
-		transform: scale(1.2, 1.2);
+		transform: translate(-50%, -50%) scale(1.2, 1.2);
 	}
 	&:active {
-		transform: scale(.8, .8);
+		transform: translate(-50%, -50%) scale(.8, .8);
 		opacity: .3;
 	}
 }
 
 @include tablet-only {
 	.video-block {
-		padding-top: 75px;
+		padding-top: 80px;
 	}
 }
 

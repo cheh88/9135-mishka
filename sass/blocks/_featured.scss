@@ -5,23 +5,27 @@
 }
 
 .featured__header {
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 
 .featured__title {
-	margin: 0 0 8px;
+	margin: 0 0 6px;
 }
 
 .featured__label {
-	display: block;
 	font-size: 17px;
 	line-height: 1;
+	display: block;
 	text-transform: uppercase;
 	color: $primary-color;
 }
 
 .featured__content {
 	margin-bottom: 28px;
+}
+
+.featured__excerpt {
+	padding-bottom: 3px;
 }
 
 .featured__thumbnail {
@@ -40,8 +44,12 @@
 
 .featured__details-field,
 .featured__details-value {
-	padding: 8px 0;
+	padding: 7px 10px 8px 0;
 	border-bottom: 1px solid $gray-lightest;
+}
+
+.featured__details-field {
+	padding-right: 18px;
 }
 
 .featured__price {
@@ -70,35 +78,39 @@
 		@include clearfix;
 	}
 	.featured__header {
-		margin-bottom: 50px;
+		display: flex;
+		margin-bottom: 42px;
 
-		@include clearfix;
+		flex-wrap: wrap;
 	}
 	.featured__title {
-		float: left;
+		flex-grow: 1;
 	}
 	.featured__label {
-		float: right;
-		margin: 12px 28px 0 0;
+		margin: 12px 25px 0 0;
 		text-align: center;
 	}
 	.featured__thumbnail {
 		float: right;
 		width: 50%;
-		min-height: 405px;
-		margin: 0 0 20px 44px;
+		min-height: 403px;
+		margin: 8px 0 20px 44px;
 		text-align: center;
 		background-color: rgba($primary-color, .2);
 	}
 	.featured__content {
 		float: left;
 		width: calc(50% - 44px);
-		margin-bottom: 55px;
+		margin-bottom: 58px;
 	}
-	.featured-excerpt {
-		padding-bottom: 10px;
+	.featured__excerpt {
 		font-size: 17px;
 		line-height: 30px;
+		padding-bottom: 18px;
+	}
+	.featured__details-field,
+	.featured__details-value {
+		padding-right: 3px;
 	}
 	.featured__footer {
 		float: left;
@@ -116,7 +128,7 @@
 @include desktop {
 	.featured {
 		position: relative;
-		padding-bottom: 60px;
+		padding-bottom: 65px;
 	}
 	.featured__header {
 		position: absolute;
@@ -125,26 +137,32 @@
 		margin-bottom: 0;
 	}
 	.featured__title {
-		float: right;
 		margin: 0;
+
+		order: 1;
 	}
 	.featured__label {
-		float: left;
 		width: $desktop-col;
 		margin: 15px 0 0;
 	}
 	.featured__content {
-		margin-bottom: 105px;
+		margin-bottom: 110px;
 		padding-top: 160px;
+	}
+	.featured__content,
+	.featured__footer {
+		width: calc(50% - 58px);
 	}
 	.featured__content-inner,
 	.featured__footer-inner {
 		padding-left: 175px;
 	}
-	.featured-excerpt {
+	.featured__excerpt {
 		padding-bottom: 30px;
 	}
 	.featured__thumbnail {
 		min-height: 635px;
+		margin-top: 0;
+		margin-left: 58px;
 	}
 }

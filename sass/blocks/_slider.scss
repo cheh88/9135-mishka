@@ -56,6 +56,9 @@
 }
 
 @include desktop {
+	.slider__item {
+		padding-right: 75px;
+	}
 	.slider__nav {
 		bottom: 110px;
 	}

@@ -1,29 +1,23 @@
 .text-element {
-	margin-top: 15px;
-	&:first-of-type {
-		margin-top: 5px;
-	}
-	&:only-of-type {
-		margin-top: 0;
-	}
+	margin-bottom: 15px;
 }
 
 .text-element label {
-	display: block;
-	padding-top: 5px;
 	font-size: 17px;
 	font-weight: bold;
 	line-height: 20px;
+	display: block;
+	padding-top: 5px;
 }
 
 .text-element__field {
+	font-family: $font-family-base;
+	font-size: $input-font-size;
+	line-height: $input-line-height;
 	box-sizing: border-box;
 	width: 100%;
 	margin: 0;
 	padding: 15px 0;
-	font-family: $font-family-base;
-	font-size: $input-font-size;
-	line-height: $input-line-height;
 	color: $input-active-color;
 	border: none;
 	border-bottom: 2px solid $input-border;
@@ -51,48 +45,54 @@
 	}
 	&--email {
 		padding-right: 40px;
-		background: url('../img/icon-mail.svg') 100% 50% no-repeat;
+		background: url('../img/icon-mail.svg') 98% 11px no-repeat;
 	}
 	&--phone {
 		padding-right: 30px;
-		background: url('../img/icon-phone.svg') 100% 50% no-repeat;
+		background: url('../img/icon-phone.svg') 97% 11px no-repeat;
 	}
 }
 
 @include tablet {
 	.text-element {
+		display: flex;
 		margin-top: 24px;
+		margin-bottom: 0;
+
+		align-items: center;
 		&:first-of-type {
 			margin-top: 0;
 		}
 	}
 	.text-element label {
-		display: inline-block;
-		width: 126px;
 		font-size: 19px;
-	}
-	.text-element--short-label label {
-		width: 72px;
+		margin-right: 25px;
+		padding-top: 0;
+
+		flex-shrink: 0;
 	}
 	.text-element__field {
-		padding-right: 60px;
-		padding-left: 17px;
 		font-size: 19px;
+		min-width: 50px;
+		padding-right: 17px;
+		padding-left: 17px;
+
+		flex-grow: 1;
 		&--email,
 		&--phone {
+			padding-right: 60px;
 			background-position: 95% 50%;
 		}
-	}
-	.text-element label + .text-element__field {
-		width: calc(100% - 126px);
-	}
-	.text-element--short-label label + .text-element__field {
-		width: calc(100% - 72px);
 	}
 }
 
 @include desktop {
+	.text-element {
+		margin-top: 23px;
+	}
 	.text-element__field {
+		padding-top: 16px;
+		padding-bottom: 16px;
 		&--email,
 		&--phone {
 			background-position: 100% 50%;
