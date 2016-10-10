@@ -40,7 +40,7 @@
 @include tablet {
 	.reviews {
 		padding-bottom: 70px;
-		background: url('../img/review@1x.jpg') 35px top no-repeat;
+		background: url('../img/review@1x.jpg') left top no-repeat;
 	}
 	.reviews__wrap {
 		position: relative;
@@ -97,12 +97,12 @@
 		padding-left: $desktop-col;
 	}
 	.reviews__author {
-		padding-top: 20px;
+		padding-top: 22px;
 	}
 	.reviews__author-name {
 		margin-bottom: 4px;
 	}
 	.reviews__write {
-		margin-top: 10px;
+		margin-top: 7px;
 	}
 }
