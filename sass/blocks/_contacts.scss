@@ -66,8 +66,8 @@
 
 @include tablet {
 	.contacts__title {
-		padding: 15px 0;
-		margin-bottom: 34px;
+		padding: 16px 0;
+		margin-bottom: 33px;
 		background: url('../img/icon-flag.svg') right top no-repeat;
 	}
 
@@ -93,7 +93,7 @@
 	}
 
 	.contacts__title {
-		background-position: 63px top;
+		background-position: 63px 8px;
 		margin-left: -$desktop-col;
 		padding-left: $desktop-col;
 	}
@@ -108,7 +108,7 @@
 		}
 
 		&--after-map {
-			padding-top: 55px;
+			padding-top: 50px;
 		}
 	}
 

@@ -1,5 +1,5 @@
 .about-us {
-	padding: 25px 0 55px;
+	padding: 25px 0 53px;
 }
 
 .about-us__wrap {
@@ -64,7 +64,7 @@
 
 @include desktop {
 	.about-us {
-		padding-bottom: 75px;
+		padding-bottom: 85px;
 	}
 	.about-us__title {
 		margin-bottom: 15px;
@@ -73,5 +73,10 @@
 	.about-us__body {
 		padding-right: $desktop-col;
 		padding-left: $desktop-col;
+	}
+	.about-us__item {
+		&:first-child {
+			margin-top: 28px;
+		}
 	}
 }

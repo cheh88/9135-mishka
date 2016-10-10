@@ -1,11 +1,11 @@
 .textarea-element__field {
+	font-family: $font-family-base;
+	font-size: $input-font-size;
+	line-height: 18px;
 	box-sizing: border-box;
 	width: 100%;
 	margin: 0;
 	padding: 15px;
-	font-family: $font-family-base;
-	font-size: $input-font-size;
-	line-height: 18px;
 	resize: vertical;
 	vertical-align: top;
 	color: $input-active-color;

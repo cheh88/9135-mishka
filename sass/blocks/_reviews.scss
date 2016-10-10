@@ -7,7 +7,7 @@
 }
 
 .reviews__title {
-	margin: 0 0 25px;
+	margin: 0 0 23px;
 }
 
 .reviews__items {
@@ -16,7 +16,7 @@
 
 .reviews__item {
 	line-height: 30px;
-	margin: 0 0 32px;
+	margin: 0 0 28px;
 }
 
 .reviews__author {
@@ -29,6 +29,7 @@
 	font-style: normal;
 	line-height: 24px;
 	display: block;
+	margin-bottom: 5px;
 	color: #000;
 }
 
@@ -39,7 +40,7 @@
 @include tablet {
 	.reviews {
 		padding-bottom: 70px;
-		background: url('../img/review@1x.jpg') left top no-repeat;
+		background: url('../img/review@1x.jpg') 35px top no-repeat;
 	}
 	.reviews__wrap {
 		position: relative;
@@ -52,7 +53,7 @@
 		align-items: flex-start;
 	}
 	.reviews__title {
-		margin-bottom: 50px;
+		margin-bottom: 48px;
 	}
 	.reviews__items {
 		order: 2;
@@ -67,6 +68,9 @@
 	.reviews__author-name,
 	.reviews__author-email {
 		font-size: 17px;
+	}
+	.reviews__author-name {
+		margin-bottom: 3px;
 	}
 	.reviews__write {
 		margin-bottom: 10px;

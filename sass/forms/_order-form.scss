@@ -1,3 +1,7 @@
+.order-form {
+	padding-bottom: 16px;
+}
+
 .order-form fieldset {
 	margin: 0;
 	padding: 0;
@@ -5,9 +9,9 @@
 }
 
 .order-form__desc-text {
-	margin-bottom: 18px;
 	font-size: 13px;
 	line-height: 24px;
+	margin-bottom: 14px;
 }
 
 .order-form__btn {
@@ -26,19 +30,23 @@
 
 @include tablet {
 	.order-form {
-		padding-top: 38px;
+		padding-top: 30px;
+		padding-bottom: 0;
 	}
 	.order-form__desc {
 		width: $tablet-width - ($tablet-gutter * 2);
 		margin: 0 auto;
 	}
 	.order-form__desc-text {
-		margin-bottom: 8px;
 		font-size: 17px;
 		line-height: 30px;
+		margin-bottom: 8px;
 	}
 	.order-form fieldset {
-		padding: 48px 0 52px;
+		padding: 48px 0 60px;
+		&:first-of-type {
+			padding-bottom: 52px;
+		}
 		&:nth-of-type(even) {
 			padding: 60px 0;
 			background-color: $body-bg-color;
@@ -73,15 +81,22 @@
 }
 
 @include desktop {
+	.order-form {
+		padding-top: 76px;
+	}
 	.order-form__desc,
 	.order-form__btns,
 	.order-form__fieldset-wrap {
 		width: $desktop-width - ($desktop-gutter * 2);
 	}
+	.order-form__desc-text {
+		padding-right: $desktop-col;
+		padding-left: $desktop-col;
+	}
 	.order-form__btns {
+		box-sizing: border-box;
 		padding-top: 40px;
 		padding-right: $desktop-col;
 		padding-left: $desktop-col;
-		box-sizing: border-box;
 	}
 }

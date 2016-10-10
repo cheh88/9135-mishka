@@ -50,10 +50,11 @@
 
 @include tablet {
 	.page-footer {
-		padding: 55px 0 20px;
+		padding: 58px 0 20px;
 	}
 	.page-footer__inner {
 		display: flex;
+
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}

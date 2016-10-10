@@ -1,5 +1,6 @@
 .catalog {
 	padding-top: 3px;
+
 	@include container;
 }
 
@@ -19,14 +20,14 @@
 @include desktop {
 	.catalog {
 		display: flex;
+		padding-top: 83px;
+
 		flex-wrap: wrap;
-		padding-top: 85px;
 	}
 	.catalog__item {
 		width: 315px;
 		margin-right: 50px;
 		margin-bottom: 50px;
-
 		&:nth-child(3n) {
 			margin-right: 0;
 		}
