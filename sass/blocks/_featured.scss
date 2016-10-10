@@ -38,12 +38,17 @@
 
 .featured__details {
 	width: 100%;
+	table-layout: fixed;
+	white-space: nowrap;
 	border-collapse: collapse;
 	background-color: transparent;
 }
 
 .featured__details-field,
 .featured__details-value {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	padding: 7px 10px 8px 0;
 	border-bottom: 1px solid $gray-lightest;
 }
