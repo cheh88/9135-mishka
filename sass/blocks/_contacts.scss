@@ -1,5 +1,8 @@
 .contacts {
 	padding-top: 40px;
+	background-image: url('../img/bg-zigzag-line.svg');
+	background-repeat: repeat-x;
+	background-position: 50% 0;
 }
 
 .contacts__location {
@@ -43,7 +46,7 @@
 }
 
 @include mobile-only {
-	.contacts__wrap {
+	.contacts__block {
 		width: $mobile-width - ($mobile-gutter * 2);
 		margin-right: auto;
 		margin-left: auto;
@@ -56,7 +59,7 @@
 }
 
 @include tablet-only {
-	.contacts__wrap {
+	.contacts__block {
 		width: $tablet-width - ($tablet-gutter * 2);
 		margin-right: auto;
 		margin-left: auto;
@@ -66,7 +69,7 @@
 		width: calc( (#{$tablet-col}*2) - 78px );
 	}
 
-	.contacts__wrap--after-map {
+	.contacts__block--after-map {
 		text-align: center;
 	}
 }
@@ -94,10 +97,13 @@
 
 @include desktop {
 	.contacts {
+		padding-top: 92px;
+	}
+
+	.contacts__wrap {
 		width: $desktop-width - ($desktop-gutter * 2);
 		margin-right: auto;
 		margin-left: auto;
-		padding-top: 75px;
 		@include clearfix;
 	}
 
@@ -107,7 +113,7 @@
 		padding-left: $desktop-col;
 	}
 
-	.contacts__wrap {
+	.contacts__block {
 		width: $desktop-col * 1.8;
 		float: left;
 		padding-left: $desktop-col;

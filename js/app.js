@@ -1,4 +1,8 @@
 (function () {
+	initMenu();
+})();
+
+function initMenu() {
 	var navMain   = document.querySelector( '.main-nav' ),
 		navToggle = document.querySelector( '.main-nav__toggle' );
 
@@ -14,8 +18,7 @@
 			navMain.classList.remove( 'main-nav--opened' );
 		}
 	});
-
-})();
+}
 
 function initMap() {
 	var center = {

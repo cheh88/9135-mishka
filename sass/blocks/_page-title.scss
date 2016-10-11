@@ -8,9 +8,9 @@
 }
 
 .page-title__heading {
+	margin: 0;
 	font-size: 27px;
 	line-height: 30px;
-	margin: 0;
 	text-align: center;
 }
 
@@ -25,6 +25,9 @@
 }
 
 @include desktop {
+	.page-title {
+		padding-bottom: 102px;
+	}
 	.page-title__heading {
 		font-size: 53px;
 		line-height: 57px;

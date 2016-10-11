@@ -1,14 +1,31 @@
-.page-main {
-	background-color: $main-bg-color;
-}
-
 .page-main__inner {
 	padding: 27px 0 40px;
+	background-color: $main-bg-color;
 
 	@include tablet {
 		padding: 45px 0 57px;
 	}
 	@include desktop {
 		padding: 70px 0 104px;
+	}
+}
+
+@include tablet {
+	.page-main {
+		position: relative;
+		z-index: 9;
+		margin-top: -18px;
+		padding-top: 18px;
+		background-image: url('../img/bg-zigzag-fill.svg');
+		background-repeat: repeat-x;
+		background-position: 50% 6px;
+		background-size: auto 23px;
+	}
+}
+
+@include desktop {
+	.page-main {
+		background-position: 50% 0;
+		background-size: auto auto;
 	}
 }

@@ -21,6 +21,14 @@
 	text-align: center;
 }
 
+.page-header__logo-link:hover img {
+	opacity: .65;
+}
+
+.page-header__logo-link:active img {
+	opacity: .5;
+}
+
 @include tablet {
 	.page-header__top-wrapper {
 		display: flex;
@@ -36,6 +44,7 @@
 		position: absolute;
 		z-index: 9;
 		left: 50%;
+		margin-top: 7px;
 		transform: translateX(-50%);
 	}
 }

@@ -86,9 +86,6 @@
 
 		flex-grow: 1;
 	}
-	.product__thumbnail {
-		min-height: 462px;
-	}
 	.product__title {
 		margin: 5px 0;
 	}
@@ -97,7 +94,6 @@
 		margin-bottom: 15px;
 	}
 	.product__footer {
-		padding-right: 0;
 		padding-left: 0;
 	}
 }

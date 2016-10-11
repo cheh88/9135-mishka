@@ -1,7 +1,11 @@
 .promo {
 	position: relative;
 	z-index: 1;
-	background: #f9f9f9 url('../img/hero-mobile@1x.jpg') 50% -18px no-repeat;
+	background-color: #f9f9f9;
+	background-position: 50% -18px;
+	background-repeat: no-repeat;
+
+	@include img-retina( '../img/hero-mobile@1x.jpg', '../img/hero-mobile@2x.jpg', 575px, 373px );
 }
 
 .promo__wrapper {
@@ -22,6 +26,10 @@
 }
 
 @include tablet {
+	.promo {
+		background-position: 50% 0;
+		background-size: cover;
+	}
 	.promo__wrapper {
 		min-height: 626px;
 	}
@@ -36,9 +44,13 @@
 }
 
 @include desktop {
+	.promo {
+		background-position: 50% -2px;
+		@include img-retina( '../img/hero-desktop@1x.jpg', '../img/hero-desktop@2x.jpg', 1150px, 746px );
+	}
 	.promo__text {
 		font-size: 53px;
 		line-height: 57px;
-		padding-top: 14%;
+		padding-top: 14.5%;
 	}
 }
