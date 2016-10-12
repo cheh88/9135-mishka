@@ -27,8 +27,8 @@
 
 @include tablet {
 	.promo {
+		@include img-retina( '../img/hero-desktop@1x.jpg', '../img/hero-desktop@2x.jpg', auto, 100% );
 		background-position: 50% 0;
-		background-size: cover;
 	}
 	.promo__wrapper {
 		min-height: 626px;
@@ -46,7 +46,7 @@
 @include desktop {
 	.promo {
 		background-position: 50% -2px;
-		@include img-retina( '../img/hero-desktop@1x.jpg', '../img/hero-desktop@2x.jpg', 1150px, 746px );
+		background-size: 1150px, 746px;
 	}
 	.promo__text {
 		font-size: 53px;
