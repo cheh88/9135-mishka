@@ -38,6 +38,18 @@
 	justify-content: space-between;
 }
 
+.product__more-link .icon-cart {
+	fill: $btn-cart-color;
+}
+
+.product__more-link:hover .icon-cart {
+	fill: $primary-color-light;
+}
+
+.product__more-link:active .icon-cart {
+	fill: rgba($primary-color-light, .3);
+}
+
 @include tablet-only {
 	.product__thumbnail {
 		width: 50%;

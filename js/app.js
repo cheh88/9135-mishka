@@ -66,7 +66,7 @@ function initMap() {
 
 	marker = new google.maps.Marker({
 		position: center,
-		icon: 'img/icon-map-pin.svg',
+		icon: 'img/icons/icon-map-pin.svg',
 		map: map
 	});
 }
