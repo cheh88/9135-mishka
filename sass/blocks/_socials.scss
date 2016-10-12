@@ -4,10 +4,10 @@
 	vertical-align: middle;
 }
 
-.social-link:hover path {
+.social-link:hover .icon-social {
 	fill: $primary-color-dark;
 }
 
-.social-link:active path {
+.social-link:active .icon-social {
 	fill: rgba($primary-color-dark, .3);
 }

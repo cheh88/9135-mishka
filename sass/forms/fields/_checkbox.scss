@@ -42,7 +42,7 @@
 
 .checkbox-element__field:checked + label {
 	&::before {
-		background: url('../img/icon-tick.svg') 0 0 no-repeat;
+		background: url('../img/icons/icon-tick.svg') 0 0 no-repeat;
 		background-size: 22px 21px;
 	}
 }

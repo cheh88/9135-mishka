@@ -1,16 +1,13 @@
-.search-form__btn svg {
+.search-form__btn .icon-search {
 	vertical-align: middle;
-}
-
-.search-form__btn path {
 	fill: $btn-search-color;
 }
 
-.search-form__btn:hover path {
+.search-form__btn:hover .icon-search {
 	fill: $primary-color-light;
 }
 
-.search-form__btn:active path {
+.search-form__btn:active .icon-search {
 	fill: rgba($primary-color-light, .3);
 }
 

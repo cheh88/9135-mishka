@@ -135,6 +135,10 @@
 	.main-nav__items--primary .main-nav__item:first-child {
 		border-top: none;
 	}
+	.main-nav__item--search .main-nav__link,
+	.main-nav__item--cart .main-nav__link {
+		padding-right: 0;
+	}
 }
 
 @include tablet {

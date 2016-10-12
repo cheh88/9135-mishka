@@ -1,20 +1,23 @@
-.cart-block__link svg {
-	margin-right: 27px;
+.cart-block__link .icon-cart {
+	margin-right: 24px;
 	vertical-align: middle;
-}
-
-.cart-block__link path {
 	fill: $btn-cart-color;
 }
 
-.cart-block__link:hover path {
+.cart-block__link:hover .icon-cart {
 	fill: $primary-color-light;
 }
 
-.cart-block__link:active path {
+.cart-block__link:active .icon-cart {
 	fill: rgba($primary-color-light, .3);
 }
 
 .cart-block__info {
 	vertical-align: middle;
+}
+
+@include tablet {
+	.cart-block__link svg {
+		margin-right: 27px;
+	}
 }

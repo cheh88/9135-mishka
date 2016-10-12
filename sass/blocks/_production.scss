@@ -23,14 +23,11 @@
 	padding: 24px 33px 24px;
 }
 
-.production__header svg {
+.production__header .icon-video {
 	margin: 5px 25px 0 0;
 	vertical-align: middle;
 
 	flex-shrink: 0;
-}
-
-.production__header path {
 	fill: $primary-color-light;
 }
 

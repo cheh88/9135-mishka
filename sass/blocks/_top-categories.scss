@@ -10,9 +10,6 @@
 		color: #fff;
 		background-color: $primary-color-dark;
 	}
-	&:hover {
-		// transform: translateY(-5px);
-	}
 	&--second {
 		background-color: $primary-color-darken;
 		&:hover,
@@ -28,15 +25,16 @@
 	justify-content: space-between;
 }
 
-.top-categories__item svg {
+.top-categories__icon {
+	fill: #149080;
 	opacity: .5;
 }
 
-.top-categories__item:hover svg {
+.top-categories__item:hover .top-categories__icon {
 	opacity: .7;
 }
 
-.top-categories__item:active svg {
+.top-categories__item:active .top-categories__icon {
 	opacity: .3;
 }
 
@@ -71,6 +69,9 @@
 		box-sizing: border-box;
 		width: 50%;
 		padding: 28px 35px 29px 37px;
+		&:hover {
+			transform: translateY(-5px);
+		}
 	}
 	.top-categories__item-title {
 		font-size: 20px;

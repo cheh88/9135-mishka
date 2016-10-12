@@ -18,13 +18,18 @@
 	background: none;
 }
 
-.slider__prev:hover polygon,
-.slider__next:hover polygon {
+.slider__prev .icon-left-arrow,
+.slider__next .icon-right-arrow {
+	fill: #000;
+}
+
+.slider__prev:hover .icon-left-arrow,
+.slider__next:hover .icon-right-arrow {
 	fill: $gray;
 }
 
-.slider__prev:active polygon,
-.slider__next:active polygon {
+.slider__prev:active .icon-left-arrow,
+.slider__next:active .icon-right-arrow {
 	fill: $gray-light;
 }
 
