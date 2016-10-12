@@ -245,7 +245,7 @@
 	}
 	.main-nav__items--secondary .main-nav__item {
 		display: block;
-		margin-right: 63px;
+		margin-right: 62px;
 		&--delivery {
 			margin-right: 0;
 			margin-left: auto;
@@ -254,12 +254,15 @@
 	/* Menu Link */
 	.main-nav__items--primary .main-nav__link {
 		font-size: 17px;
-		padding: 31px 37px 33px 35px;
+		padding: 31px 37px 33px 34px;
 	}
 	.main-nav__items--primary .main-nav__item:first-child .main-nav__link {
 		padding-left: 0;
 	}
 	.main-nav__items--secondary .main-nav__link {
 		text-align: left;
+	}
+	.main-nav__item--cart .main-nav__link {
+		padding-left: 32px;
 	}
 }

@@ -40,7 +40,10 @@
 @include tablet {
 	.reviews {
 		padding-bottom: 70px;
-		background: url('../img/review@1x.jpg') 35px top no-repeat;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+
+		@include img-retina( '../img/review@1x.jpg', '../img/review@2x.jpg', 350px, 457px );
 	}
 	.reviews__wrap {
 		position: relative;
@@ -84,25 +87,28 @@
 
 @include desktop {
 	.reviews {
-		padding-bottom: 85px;
+		padding-bottom: 68px;
 		background: none;
 	}
 	.reviews__wrap {
 		min-height: 386px;
 		padding-top: 70px;
-		background: url('../img/review@1x.jpg') left top no-repeat;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+
+		@include img-retina( '../img/review@1x.jpg', '../img/review@2x.jpg', 350px, 457px );
 	}
 	.reviews__title,
 	.reviews__items {
 		padding-left: $desktop-col;
 	}
 	.reviews__author {
-		padding-top: 20px;
+		padding-top: 22px;
 	}
 	.reviews__author-name {
 		margin-bottom: 4px;
 	}
 	.reviews__write {
-		margin-top: 10px;
+		margin-top: 7px;
 	}
 }

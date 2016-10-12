@@ -38,12 +38,17 @@
 
 .featured__details {
 	width: 100%;
+	table-layout: fixed;
+	white-space: nowrap;
 	border-collapse: collapse;
 	background-color: transparent;
 }
 
 .featured__details-field,
 .featured__details-value {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	padding: 7px 10px 8px 0;
 	border-bottom: 1px solid $gray-lightest;
 }
@@ -93,7 +98,6 @@
 	.featured__thumbnail {
 		float: right;
 		width: 50%;
-		min-height: 403px;
 		margin: 8px 0 20px 44px;
 		text-align: center;
 		background-color: rgba($primary-color, .2);
@@ -128,7 +132,7 @@
 @include desktop {
 	.featured {
 		position: relative;
-		padding-bottom: 65px;
+		padding-bottom: 53px;
 	}
 	.featured__header {
 		position: absolute;
@@ -161,7 +165,6 @@
 		padding-bottom: 30px;
 	}
 	.featured__thumbnail {
-		min-height: 635px;
 		margin-top: 0;
 		margin-left: 58px;
 	}

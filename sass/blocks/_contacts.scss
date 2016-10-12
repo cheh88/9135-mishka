@@ -1,9 +1,8 @@
 .contacts {
 	padding-top: 40px;
-}
-
-.contacts__wrap {
-	@include container;
+	background-image: url('../img/bg-zigzag-line.svg');
+	background-repeat: repeat-x;
+	background-position: 50% 0;
 }
 
 .contacts__location {
@@ -11,10 +10,11 @@
 }
 
 .contacts__items {
+	display: flex;
+	flex-wrap: wrap;
 	font-size: 15px;
 	line-height: 30px;
 	margin: 0;
-	@include clearfix;
 }
 
 .contacts__items a {
@@ -35,17 +35,22 @@
 }
 
 .contacts__field {
-	float: left;
 	width: 78px;
 	margin: 0;
+	flex-shrink: 0;
 }
 
 .contacts__value {
+	width: calc(100% - 78px);
 	margin: 0 0 30px;
-	overflow: hidden;
 }
 
 @include mobile-only {
+	.contacts__block {
+		width: $mobile-width - ($mobile-gutter * 2);
+		margin-right: auto;
+		margin-left: auto;
+	}
 	.contacts__title {
 		font-size: 18px;
 		line-height: 30px;
@@ -54,12 +59,17 @@
 }
 
 @include tablet-only {
+	.contacts__block {
+		width: $tablet-width - ($tablet-gutter * 2);
+		margin-right: auto;
+		margin-left: auto;
+	}
+
 	.contacts__value {
-		float: left;
 		width: calc( (#{$tablet-col}*2) - 78px );
 	}
 
-	.contacts__wrap--after-map {
+	.contacts__block--after-map {
 		text-align: center;
 	}
 }
@@ -87,8 +97,13 @@
 
 @include desktop {
 	.contacts {
-		padding-top: 80px;
-		@include container;
+		padding-top: 92px;
+	}
+
+	.contacts__wrap {
+		width: $desktop-width - ($desktop-gutter * 2);
+		margin-right: auto;
+		margin-left: auto;
 		@include clearfix;
 	}
 
@@ -98,13 +113,13 @@
 		padding-left: $desktop-col;
 	}
 
-	.contacts__wrap {
-		width: $desktop-col * 2;
+	.contacts__block {
+		width: $desktop-col * 1.8;
 		float: left;
 		padding-left: $desktop-col;
 
 		&--before-map {
-			padding-top: 25px;
+			padding-top: 28px;
 		}
 
 		&--after-map {

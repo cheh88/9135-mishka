@@ -2,8 +2,7 @@
 	position: relative;
 	overflow: hidden;
 	height: 0;
-	padding-top: 5px;
-	padding-bottom: percentage(9 / 16);
+	padding-bottom: 58%;
 	text-align: center;
 	background-color: rgba($primary-color, .1);
 }
@@ -18,7 +17,7 @@
 	border: 0;
 }
 
-.video-block svg {
+.video-block__play {
 	position: absolute;
 	z-index: 2;
 	top: 50%;
@@ -37,14 +36,14 @@
 	}
 }
 
-@include tablet-only {
+@include tablet {
 	.video-block {
-		padding-top: 80px;
+		padding-bottom: 68%;
 	}
 }
 
 @include desktop {
 	.video-block {
-		padding-bottom: percentage(9 / 21);
+		padding-bottom: 43%;
 	}
 }

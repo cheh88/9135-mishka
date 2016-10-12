@@ -1,5 +1,9 @@
 .about-us {
 	padding: 25px 0 53px;
+	background-image: url('../img/bg-zigzag-line.svg');
+	background-repeat: repeat-x;
+	background-position: 50% 6px;
+	background-size: auto 7px;
 }
 
 .about-us__wrap {
@@ -32,6 +36,8 @@
 @include tablet {
 	.about-us {
 		padding: 45px 0 76px;
+		background-position: 50% 8px;
+		background-size: auto 12px;
 	}
 	.about-us__body {
 		display: flex;
@@ -64,7 +70,9 @@
 
 @include desktop {
 	.about-us {
-		padding-bottom: 85px;
+		padding: 56px 0 85px;
+		background-position: 50% 0;
+		background-size: auto auto;
 	}
 	.about-us__title {
 		margin-bottom: 15px;
