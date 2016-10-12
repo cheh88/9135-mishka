@@ -23,7 +23,7 @@ function initMenu() {
 
 function initPopup() {
 	var modal      = document.getElementById( 'modal' ),
-		addBtn     = modal.querySelector('.sizes-select-form__add'),
+		addBtn     = null !== modal ? modal.querySelector('.sizes-select-form__add') : null,
 		orderBtn   = document.querySelector( '.featured__btn' ),
 		productBtn = document.querySelectorAll( '.product__more-link' );
 

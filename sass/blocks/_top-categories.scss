@@ -10,9 +10,6 @@
 		color: #fff;
 		background-color: $primary-color-dark;
 	}
-	&:hover {
-		// transform: translateY(-5px);
-	}
 	&--second {
 		background-color: $primary-color-darken;
 		&:hover,
@@ -72,6 +69,9 @@
 		box-sizing: border-box;
 		width: 50%;
 		padding: 28px 35px 29px 37px;
+		&:hover {
+			transform: translateY(-5px);
+		}
 	}
 	.top-categories__item-title {
 		font-size: 20px;

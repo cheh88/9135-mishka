@@ -5,6 +5,8 @@
 }
 
 .sizes-select-form legend {
+	display: block;
+	width: 100%;
 	font-size: 15px;
 	line-height: 30px;
 }
@@ -28,6 +30,10 @@
 	border: 2px solid $gray-lightest;
 
 	flex-grow: 1;
+}
+
+.sizes-select-form label:hover {
+	border-color: $gray-lighten;
 }
 
 .sizes-select-form__option {
