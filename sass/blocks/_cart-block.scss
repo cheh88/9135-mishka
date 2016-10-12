@@ -1,5 +1,5 @@
 .cart-block__link svg {
-	margin-right: 27px;
+	margin-right: 24px;
 	vertical-align: middle;
 }
 
@@ -17,4 +17,10 @@
 
 .cart-block__info {
 	vertical-align: middle;
+}
+
+@include tablet {
+	.cart-block__link svg {
+		margin-right: 27px;
+	}
 }

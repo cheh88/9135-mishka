@@ -145,7 +145,7 @@
 							<div class="featured__price">
 								<b class="featured__price-label">Цена:</b>&nbsp;&nbsp;<b class="featured__price-value">990 руб.</b>
 							</div>
-							<a href="#" class="featured__btn btn btn--primary">Заказать</a>
+							<a href="modal.html" class="featured__btn btn btn--primary" target="_blank">Заказать</a>
 						</div>
 					</footer>
 				</article><!--.featured-->
@@ -273,7 +273,13 @@
 							</dl>
 						</div>
 
-						<div id="map" class="contacts__location map"></div><!--.map-->
+						<div id="map" class="contacts__location map">
+							<picture>
+								<source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg">
+								<source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg">
+								<img src="img/map-mobile@1x.jpg" alt="Map">
+							</picture>
+						</div><!--.map-->
 
 						<div class="contacts__block contacts__block--after-map">
 							<a href="#" class="contacts__write btn btn--primary">Напишите нам</a>
@@ -348,15 +354,22 @@
 	<section id="modal" class="modal-window">
 		<div class="modal-window__inner">
 			<header class="modal-window__header">
-				<h2 class="modal-window__title">Добавить в корзину</h2>
+				<h2 class="modal-window__title">Добавить <br>в корзину</h2>
 			</header>
 			<div class="modal-window__content">
 				<form class="modal-window__form sizes-select-form" action="#" method="post">
 					<fieldset>
 						<legend>Выберите размер:</legend>
-						<input class="sizes-select-form__option sizes-select-form__option--active" type="radio" name="size" value="S" checked>
-						<input class="sizes-select-form__option" type="radio" name="size" value="M">
-						<input class="sizes-select-form__option" type="radio" name="size" value="L">
+						<div class="sizes-select-form__wrap">
+							<input id="sizes-select-option-1" class="sizes-select-form__option" type="radio" name="size" value="S" checked>
+							<label for="sizes-select-option-1">S</label>
+
+							<input id="sizes-select-option-2" class="sizes-select-form__option" type="radio" name="size" value="M">
+							<label for="sizes-select-option-2">M</label>
+
+							<input id="sizes-select-option-3" class="sizes-select-form__option" type="radio" name="size" value="L">
+							<label for="sizes-select-option-3">L</label>
+						</div>
 					</fieldset>
 					<button class="sizes-select-form__add btn btn--primary" type="button">Добавить</button>
 				</form>

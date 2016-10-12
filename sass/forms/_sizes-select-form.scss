@@ -1,0 +1,53 @@
+.sizes-select-form fieldset {
+	margin: 15px 0 30px;
+	padding: 0;
+	border: none;
+}
+
+.sizes-select-form legend {
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.sizes-select-form__wrap {
+	display: flex;
+	margin-right: -4px;
+	margin-left: -3px;
+	padding-top: 25px;
+
+	justify-content: space-between;
+}
+
+.sizes-select-form label {
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 48px;
+	min-width: 78px;
+	margin: 0 3px 0 4px;
+	cursor: pointer;
+	border: 2px solid $gray-lightest;
+
+	flex-grow: 1;
+}
+
+.sizes-select-form__option {
+	display: none;
+}
+
+.sizes-select-form__option:checked + label {
+	border-color: $primary-color-light;
+}
+
+.sizes-select-form__add {
+	display: block;
+	width: 100%;
+	color: #fff;
+	border-color: $primary-color-light;
+	background-color: $primary-color-light;
+}
+
+@include tablet {
+	.sizes-select-form legend {
+		font-size: 17px;
+	}
+}

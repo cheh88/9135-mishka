@@ -1,5 +1,6 @@
 (function () {
 	initMenu();
+	initPopup();
 })();
 
 function initMenu() {
@@ -18,6 +19,36 @@ function initMenu() {
 			navMain.classList.remove( 'main-nav--opened' );
 		}
 	});
+}
+
+function initPopup() {
+	var modal      = document.getElementById( 'modal' ),
+		addBtn     = modal.querySelector('.sizes-select-form__add'),
+		orderBtn   = document.querySelector( '.featured__btn' ),
+		productBtn = document.querySelectorAll( '.product__more-link' );
+
+	if ( orderBtn ) {
+		orderBtn.onclick = function( event ) {
+			event.preventDefault();
+			modal.classList.add( 'modal-window--show' );
+		}
+	}
+
+	if ( productBtn ) {
+		for ( var i = 0; i < productBtn.length; i++ ) {
+			productBtn[i].onclick = function() {
+				event.preventDefault();
+				modal.classList.add( 'modal-window--show' );
+			}
+		}
+	}
+
+	if ( addBtn ) {
+		addBtn.onclick = function() {
+			event.preventDefault();
+			modal.classList.remove( 'modal-window--show' );
+		}
+	}
 }
 
 function initMap() {
